@@ -97,7 +97,9 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .offer-card::before { content: ""; position: absolute; width: 180px; height: 180px; top: -100px; right: -100px; border: 1px solid currentColor; border-radius: 50%; opacity: .12; }
 .offer-card:hover { transform: translateY(-7px); border-color: var(--olive); background: rgba(156,166,106,.1); color: var(--white); box-shadow: var(--shadow); }
 .card-number { position: absolute; top: 28px; right: 30px; font-size: 12px; opacity: .45; }
-.offer-icon { display: grid; place-items: center; width: 50px; height: 50px; margin-bottom: auto; border: 1px solid var(--olive); border-radius: 15px; color: var(--olive); font-size: 22px; }
+.offer-icon { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: auto; border: 1px solid rgba(156,166,106,.58); border-radius: 16px; background: rgba(156,166,106,.09); color: var(--olive-light); transition: background .25s ease, color .25s ease, transform .25s ease; }
+.offer-icon svg { width: 27px; height: 27px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.offer-card:hover .offer-icon { background: var(--olive); color: var(--brown); transform: rotate(-3deg) scale(1.04); }
 .offer-card h3 { margin: 45px 0 13px; font-size: 24px; letter-spacing: -.03em; }
 .offer-card p { margin: 0 0 30px; opacity: .62; }
 .offer-card a { display: flex; justify-content: space-between; padding-top: 18px; border-top: 1px solid currentColor; font-size: 13px; font-weight: 700; }
@@ -168,6 +170,8 @@ html[data-theme="light"] .scroll-hint { border-color: rgba(36,21,15,.25); }
 html[data-theme="light"] .scroll-hint span { background: var(--brown); }
 html[data-theme="light"] .offer { background: rgba(156,166,106,.13); }
 html[data-theme="light"] .section-heading > p { color: rgba(36,21,15,.62); }
+html[data-theme="light"] .offer-icon { color: var(--olive); background: rgba(156,166,106,.12); }
+html[data-theme="light"] .offer-card:hover .offer-icon { color: var(--brown); background: var(--olive); }
 html[data-theme="light"] .offer-card:hover { background: var(--brown); color: var(--white); }
 html[data-theme="light"] .process { background: var(--white); color: var(--brown); }
 html[data-theme="light"] .process-copy p:not(.eyebrow),
