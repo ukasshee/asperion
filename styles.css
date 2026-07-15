@@ -50,10 +50,12 @@ html[data-theme="light"] .theme-moon { opacity: 1; transform: rotate(0) scale(1)
 .button-small { min-height: 46px; padding-inline: 19px; border-radius: 13px; font-size: 13px; }
 .button-light { border-color: var(--olive); background: var(--olive); }
 
-.hero { position: relative; min-height: 820px; height: 100svh; max-height: 980px; overflow: hidden; display: grid; place-items: center; background: var(--brown); color: var(--white); }
-.hero::before { content: ""; position: absolute; inset: 0; opacity: .07; background-image: radial-gradient(circle at center, var(--white) 0 1px, transparent 1.5px); background-size: 26px 26px; mask-image: linear-gradient(to right, transparent, black, transparent); }
-.hero-glow { position: absolute; width: 650px; height: 650px; top: 15%; right: 2%; border-radius: 50%; background: radial-gradient(circle, rgba(156,166,106,.28), rgba(156,166,106,0) 66%); filter: blur(5px); }
-.hero-grid { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 90px; align-items: center; padding-top: 95px; }
+.hero { position: relative; min-height: 820px; height: 100svh; max-height: 980px; overflow: hidden; display: grid; place-items: center; background: var(--brown); color: var(--white); isolation: isolate; }
+.hero::before { content: ""; position: absolute; z-index: 2; inset: 0; opacity: .05; background-image: radial-gradient(circle at center, var(--white) 0 1px, transparent 1.5px); background-size: 26px 26px; mask-image: linear-gradient(to right, black, transparent 64%); pointer-events: none; }
+.hero::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(36,21,15,.98) 0%, rgba(36,21,15,.93) 32%, rgba(36,21,15,.58) 57%, rgba(36,21,15,.12) 100%); pointer-events: none; }
+.hero-image { position: absolute; z-index: 0; inset: 0; background: url("hero-family-home-car.png") 58% center / cover no-repeat; transform: scale(1.01); }
+.hero-grid { position: relative; z-index: 3; display: block; padding-top: 95px; }
+.hero-copy { max-width: 690px; }
 .eyebrow { margin: 0 0 20px; color: var(--olive); font-size: 12px; font-weight: 700; letter-spacing: .18em; opacity: 1; }
 h1, h2, h3 { font-family: "Manrope", sans-serif; margin-top: 0; }
 h1 { max-width: 720px; margin-bottom: 26px; font-size: clamp(52px, 6vw, 82px); line-height: .98; letter-spacing: -.055em; }
@@ -66,20 +68,6 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .trust-line { display: flex; align-items: center; gap: 10px; margin-top: 38px; color: rgba(255,255,255,.52); font-size: 12px; }
 .trust-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--olive); box-shadow: 0 0 0 5px rgba(156,166,106,.13); }
 
-.hero-visual { position: relative; height: 500px; display: grid; place-items: center; }
-.orbit { position: absolute; border: 1px solid rgba(156,166,106,.28); border-radius: 50%; }
-.orbit-one { width: 410px; height: 410px; }
-.orbit-two { width: 300px; height: 300px; }
-.glass-card { border: 1px solid rgba(190,198,148,.32); background: linear-gradient(135deg, rgba(156,166,106,.2), rgba(255,255,255,.06)); box-shadow: 0 25px 80px rgba(0,0,0,.18); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
-.main-card { position: relative; z-index: 2; width: 275px; height: 300px; padding: 30px; border-radius: 34px; display: flex; flex-direction: column; justify-content: flex-end; transform: rotate(-4deg); }
-.main-card::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,.12); border-radius: 25px; pointer-events: none; }
-.main-card p { margin: 0; opacity: .55; font-size: 13px; }
-.main-card strong { font-family: "Manrope", sans-serif; font-size: 19px; }
-.hero-logo { display: block; width: auto; height: 112px; margin: 0 auto auto; object-fit: contain; filter: drop-shadow(0 12px 25px rgba(0,0,0,.16)); }
-.mini-card { position: absolute; z-index: 3; display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-radius: 16px; font-size: 12px; white-space: nowrap; }
-.mini-icon { display: grid; place-items: center; width: 27px; height: 27px; border: 1px solid var(--line); border-radius: 9px; }
-.card-top { top: 62px; right: -5px; }
-.card-bottom { bottom: 65px; left: -15px; }
 .scroll-hint { position: absolute; bottom: 30px; left: 50%; width: 28px; height: 44px; border: 1px solid rgba(255,255,255,.25); border-radius: 20px; }
 .scroll-hint span { position: absolute; top: 9px; left: 50%; width: 3px; height: 7px; border-radius: 5px; background: var(--white); animation: scroll 1.8s infinite; }
 @keyframes scroll { 0% { opacity: 0; transform: translate(-50%, 0); } 35% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, 15px); } }
@@ -158,14 +146,10 @@ footer p, .footer-links { font-size: 12px; opacity: .58; }
 /* Jasny wariant zachowuje tę samą brązowo-oliwkową identyfikację. */
 html[data-theme="light"] body { background: var(--white); color: var(--brown); }
 html[data-theme="light"] .hero { background: var(--white); color: var(--brown); }
-html[data-theme="light"] .hero::before { opacity: .09; background-image: radial-gradient(circle at center, var(--brown) 0 1px, transparent 1.5px); }
+html[data-theme="light"] .hero::before { opacity: .06; background-image: radial-gradient(circle at center, var(--brown) 0 1px, transparent 1.5px); }
+html[data-theme="light"] .hero::after { background: linear-gradient(90deg, rgba(255,253,247,.99) 0%, rgba(255,253,247,.94) 35%, rgba(255,253,247,.6) 61%, rgba(255,253,247,.12) 100%); }
 html[data-theme="light"] .hero-lead { color: rgba(36,21,15,.66); }
-html[data-theme="light"] .hero-glow { background: radial-gradient(circle, rgba(156,166,106,.34), rgba(156,166,106,0) 66%); }
 html[data-theme="light"] .trust-line { color: rgba(36,21,15,.56); }
-html[data-theme="light"] .orbit { border-color: rgba(36,21,15,.15); }
-html[data-theme="light"] .glass-card { border-color: rgba(36,21,15,.18); background: linear-gradient(135deg, rgba(255,255,255,.72), rgba(156,166,106,.18)); box-shadow: 0 25px 80px rgba(36,21,15,.14); }
-html[data-theme="light"] .main-card::after { border-color: rgba(36,21,15,.1); }
-html[data-theme="light"] .mini-icon { border-color: rgba(36,21,15,.18); }
 html[data-theme="light"] .scroll-hint { border-color: rgba(36,21,15,.25); }
 html[data-theme="light"] .scroll-hint span { background: var(--brown); }
 html[data-theme="light"] .offer { background: rgba(156,166,106,.13); }
@@ -197,11 +181,11 @@ html[data-theme="light"] footer { background: rgba(156,166,106,.13); color: var(
   .nav-links a { display: block; padding: 12px 14px; border-radius: 10px; }
   .nav-links a:hover { background: rgba(255,255,255,.08); }
   .hero { min-height: 900px; height: auto; }
-  .hero-grid { grid-template-columns: 1fr; gap: 20px; padding-block: 180px 110px; }
-  .hero-copy { text-align: center; }
-  .hero-lead { margin-inline: auto; }
-  .hero-actions, .trust-line { justify-content: center; }
-  .hero-visual { height: 390px; width: min(500px, 100%); margin: auto; }
+  .hero-grid { padding-block: 180px 110px; }
+  .hero-copy { text-align: left; }
+  .hero-image { background-position: 66% center; }
+  .hero::after { background: linear-gradient(90deg, rgba(36,21,15,.97) 0%, rgba(36,21,15,.88) 55%, rgba(36,21,15,.38) 100%); }
+  html[data-theme="light"] .hero::after { background: linear-gradient(90deg, rgba(255,253,247,.98) 0%, rgba(255,253,247,.9) 55%, rgba(255,253,247,.42) 100%); }
   .section-heading, .process-grid, .about-grid, .contact-shell { grid-template-columns: 1fr; gap: 55px; }
   .offer-grid { grid-template-columns: 1fr 1fr; }
   .offer-card, .offer-card:nth-child(4), .offer-card:nth-child(5) { grid-column: auto; }
@@ -221,18 +205,13 @@ html[data-theme="light"] footer { background: rgba(156,166,106,.13); color: var(
   .language-switch { font-size: 11px; }
   .hero { min-height: 820px; }
   .hero-grid { padding-block: 140px 85px; }
+  .hero-image { background-position: 73% center; }
+  .hero::after { background: rgba(36,21,15,.76); }
+  html[data-theme="light"] .hero::after { background: rgba(255,253,247,.78); }
   h1 { font-size: clamp(44px, 14vw, 64px); }
   .hero-lead { font-size: 16px; }
   .hero-actions { flex-direction: column; }
   .trust-line { margin-top: 28px; }
-  .hero-visual { height: 335px; }
-  .orbit-one { width: 320px; height: 320px; }
-  .orbit-two { width: 245px; height: 245px; }
-  .main-card { width: 210px; height: 235px; padding: 23px; border-radius: 28px; }
-  .shield-icon { width: 64px; }
-  .card-top { top: 30px; right: 0; }
-  .card-bottom { bottom: 25px; left: 0; }
-  .mini-card { padding: 10px 12px; font-size: 10px; }
   .section { padding: 90px 0; }
   .section-heading { gap: 25px; margin-bottom: 38px; }
   .offer-grid { grid-template-columns: 1fr; }
