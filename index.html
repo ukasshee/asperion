@@ -9,9 +9,6 @@
   <script>
     document.documentElement.dataset.theme = localStorage.getItem("asperion-theme") || "dark";
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -196,7 +193,8 @@
             </select>
           </label>
           <label><span data-i18n="formMessage">Wiadomość</span><textarea name="message" rows="3" required></textarea></label>
-          <label class="consent"><input type="checkbox" required /><span data-i18n="formConsent">Zgadzam się na kontakt w sprawie zapytania i akceptuję politykę prywatności.</span></label>
+          <p class="form-privacy-note" data-i18n="formSensitive">Nie podawaj w formularzu danych medycznych ani innych danych wrażliwych.</p>
+          <label class="consent"><input type="checkbox" required /><span data-i18n="formConsent">Potwierdzam zapoznanie się z <a href="privacy.html">polityką prywatności</a>.</span></label>
           <button class="button button-light" type="submit" data-i18n="formSubmit">Wyślij zapytanie</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
@@ -209,12 +207,23 @@
       <a class="brand footer-brand" href="#start" aria-label="Asperion — strona główna"><img class="brand-logo" src="logo.png" alt="" width="151" height="171" /><span>asperion</span></a>
       <p>© <span id="year"></span> Asperion. <span data-i18n="rights">Wszelkie prawa zastrzeżone.</span></p>
       <div class="footer-links">
-        <a href="#" data-i18n="privacy">Polityka prywatności</a>
-        <a href="#" data-i18n="cookies">Cookies</a>
+        <a href="privacy.html" data-i18n="privacy">Polityka prywatności</a>
+        <button class="footer-link-button" type="button" data-open-cookie-settings data-i18n="cookies">Cookies</button>
       </div>
     </div>
   </footer>
 
+  <section class="cookie-panel" id="cookie-panel" role="dialog" aria-modal="false" aria-labelledby="cookie-title" hidden>
+    <div class="cookie-copy">
+      <p class="eyebrow" data-cookie-i18n="eyebrow">PRYWATNOŚĆ</p>
+      <h2 id="cookie-title" data-cookie-i18n="title">Ta strona szanuje Twoją prywatność</h2>
+      <p data-cookie-i18n="text">Używamy wyłącznie niezbędnej pamięci lokalnej, aby zapamiętać język, motyw i potwierdzenie tego komunikatu. Nie używamy cookies analitycznych ani reklamowych.</p>
+      <a href="privacy.html#cookies" data-cookie-i18n="details">Dowiedz się więcej</a>
+    </div>
+    <button class="button cookie-confirm" type="button" data-cookie-confirm data-cookie-i18n="confirm">Rozumiem</button>
+  </section>
+
   <script src="app.js"></script>
+  <script src="consent.js"></script>
 </body>
 </html>

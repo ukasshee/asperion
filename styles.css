@@ -15,7 +15,7 @@
 html { scroll-behavior: smooth; }
 html { color-scheme: dark; }
 html[data-theme="light"] { color-scheme: light; }
-body { margin: 0; background: var(--brown); color: var(--white); font-family: "DM Sans", sans-serif; line-height: 1.55; }
+body { margin: 0; background: var(--brown); color: var(--white); font-family: "Segoe UI Variable Text", "Segoe UI", Arial, sans-serif; line-height: 1.55; }
 body.menu-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
@@ -26,7 +26,7 @@ button { color: inherit; }
 
 .nav-wrap { position: fixed; z-index: 100; top: 22px; left: 0; width: 100%; pointer-events: none; }
 .nav-island { position: relative; width: min(1120px, calc(100% - 36px)); min-height: 70px; margin: auto; padding: 10px 12px 10px 18px; border: 1px solid rgba(255,255,255,.25); border-radius: 22px; background: rgba(36,21,15,.84); color: var(--white); box-shadow: 0 18px 50px rgba(20,10,7,.22); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); display: flex; align-items: center; justify-content: space-between; gap: 24px; pointer-events: auto; transition: transform .3s ease, background .3s ease; }
-.brand { display: flex; align-items: center; gap: 10px; font: 700 20px/1 "Manrope", sans-serif; letter-spacing: -.5px; }
+.brand { display: flex; align-items: center; gap: 10px; font: 700 20px/1 "Segoe UI Variable Display", "Segoe UI", sans-serif; letter-spacing: -.5px; }
 .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--olive); border-radius: 50%; color: var(--olive-light); font-size: 14px; }
 .brand-logo { display: block; width: auto; height: 46px; object-fit: contain; }
 .nav-links { display: flex; align-items: center; gap: 28px; font-size: 14px; }
@@ -57,7 +57,7 @@ html[data-theme="light"] .theme-moon { opacity: 1; transform: rotate(0) scale(1)
 .hero-grid { position: relative; z-index: 3; display: block; padding-top: 95px; }
 .hero-copy { max-width: 690px; }
 .eyebrow { margin: 0 0 20px; color: var(--olive); font-size: 12px; font-weight: 700; letter-spacing: .18em; opacity: 1; }
-h1, h2, h3 { font-family: "Manrope", sans-serif; margin-top: 0; }
+h1, h2, h3 { font-family: "Segoe UI Variable Display", "Segoe UI", sans-serif; margin-top: 0; }
 h1 { max-width: 720px; margin-bottom: 26px; font-size: clamp(52px, 6vw, 82px); line-height: .98; letter-spacing: -.055em; }
 h1 em { font-family: Georgia, serif; font-weight: 400; }
 .hero-lead { max-width: 610px; margin: 0 0 34px; color: rgba(255,255,255,.68); font-size: 18px; }
@@ -107,7 +107,7 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .about { background: var(--brown); }
 .about-copy { padding-top: 55px; color: rgba(255,253,247,.67); font-size: 18px; }
 .about-copy p { margin: 0 0 22px; }
-.signature { margin-top: 50px; font: 700 30px/1 "Manrope", sans-serif; color: var(--white); letter-spacing: -.06em; }
+.signature { margin-top: 50px; font: 700 30px/1 "Segoe UI Variable Display", "Segoe UI", sans-serif; color: var(--white); letter-spacing: -.06em; }
 .signature span { color: var(--olive); font-family: Georgia, serif; font-size: 42px; }
 
 .contact { padding-top: 30px; background: var(--brown-soft); }
@@ -116,7 +116,7 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .contact-copy > p:not(.eyebrow) { color: rgba(255,255,255,.62); }
 .contact-details { margin-top: 55px; }
 .company-data { display: flex; flex-direction: column; gap: 3px; margin-bottom: 28px; }
-.company-data strong { color: var(--olive-light); font: 700 21px "Manrope", sans-serif; letter-spacing: .04em; }
+.company-data strong { color: var(--olive-light); font: 700 21px "Segoe UI Variable Display", "Segoe UI", sans-serif; letter-spacing: .04em; }
 .company-data span { color: rgba(255,255,255,.56); font-size: 13px; }
 .contact-details dl { margin: 0; display: grid; gap: 15px; }
 .contact-details dl > div { display: grid; grid-template-columns: 70px 1fr; gap: 12px; }
@@ -126,13 +126,15 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .contact-details dd a:hover { color: var(--olive-light); border-color: var(--olive-light); }
 .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .contact-form label { display: flex; flex-direction: column; gap: 8px; font-size: 12px; color: rgba(255,255,255,.65); }
-.contact-form label:nth-child(3), .contact-form label:nth-child(4), .consent, .contact-form button, .form-status { grid-column: 1 / -1; }
+.contact-form label:nth-child(3), .contact-form label:nth-child(4), .form-privacy-note, .consent, .contact-form button, .form-status { grid-column: 1 / -1; }
 .contact-form input, .contact-form select, .contact-form textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(255,255,255,.3); border-radius: 0; outline: none; padding: 10px 0 12px; background: transparent; color: var(--white); }
 .contact-form select option { background: var(--brown); }
 .contact-form textarea { resize: vertical; }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--olive-light); }
 .contact-form .consent { flex-direction: row; align-items: flex-start; gap: 10px; line-height: 1.4; }
 .consent input { width: 16px; flex: 0 0 auto; accent-color: var(--olive); }
+.consent a { color: var(--olive-light); text-decoration: underline; text-underline-offset: 3px; }
+.form-privacy-note { margin: -4px 0 0; color: rgba(255,255,255,.48); font-size: 11px; }
 .contact-form button { justify-self: start; }
 .form-status { min-height: 22px; margin: 0; font-size: 13px; }
 
@@ -142,6 +144,17 @@ footer { padding: 42px 0; background: var(--brown-soft); border-top: 1px solid r
 .footer-brand .brand-logo { height: 42px; }
 footer p, .footer-links { font-size: 12px; opacity: .58; }
 .footer-links { display: flex; gap: 20px; }
+.footer-link-button { border: 0; padding: 0; background: none; color: inherit; cursor: pointer; }
+.footer-links a:hover, .footer-link-button:hover { color: var(--olive-light); }
+
+.cookie-panel { position: fixed; z-index: 300; right: 24px; bottom: 24px; width: min(620px, calc(100% - 48px)); padding: 25px; border: 1px solid rgba(190,198,148,.38); border-radius: 24px; background: rgba(36,21,15,.96); color: var(--white); box-shadow: 0 24px 80px rgba(0,0,0,.35); backdrop-filter: blur(20px); display: flex; align-items: flex-end; gap: 28px; }
+.cookie-panel[hidden] { display: none; }
+.cookie-copy { flex: 1; }
+.cookie-copy .eyebrow { margin-bottom: 8px; }
+.cookie-copy h2 { margin-bottom: 8px; font-size: 21px; letter-spacing: -.025em; }
+.cookie-copy > p:not(.eyebrow) { margin: 0 0 10px; color: rgba(255,255,255,.65); font-size: 13px; }
+.cookie-copy a { color: var(--olive-light); font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.cookie-confirm { flex: 0 0 auto; min-height: 46px; }
 
 /* Jasny wariant zachowuje tę samą brązowo-oliwkową identyfikację. */
 html[data-theme="light"] body { background: var(--white); color: var(--brown); }
@@ -167,6 +180,9 @@ html[data-theme="light"] .about-copy { color: rgba(36,21,15,.67); }
 html[data-theme="light"] .signature { color: var(--brown); }
 html[data-theme="light"] .contact { background: rgba(156,166,106,.13); }
 html[data-theme="light"] footer { background: rgba(156,166,106,.13); color: var(--brown); border-top-color: rgba(36,21,15,.1); }
+html[data-theme="light"] .cookie-panel { background: rgba(255,253,247,.97); color: var(--brown); border-color: rgba(36,21,15,.16); box-shadow: 0 24px 80px rgba(36,21,15,.2); }
+html[data-theme="light"] .cookie-copy > p:not(.eyebrow) { color: rgba(36,21,15,.66); }
+html[data-theme="light"] .cookie-copy a { color: #626a3f; }
 
 .reveal { opacity: 0; transform: translateY(25px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
@@ -223,10 +239,61 @@ html[data-theme="light"] footer { background: rgba(156,166,106,.13); color: var(
   .contact-form { grid-template-columns: 1fr; }
   .contact-form label { grid-column: 1; }
   .footer-grid { flex-direction: column; text-align: center; }
+  .cookie-panel { right: 10px; bottom: 10px; width: calc(100% - 20px); padding: 20px; border-radius: 20px; align-items: stretch; flex-direction: column; gap: 18px; }
+  .cookie-confirm { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* Polityka prywatności */
+.policy-page { background: var(--brown); }
+.policy-nav { max-width: 900px; }
+.policy-back { color: rgba(255,255,255,.7); font-size: 13px; }
+.policy-back:hover { color: var(--olive-light); }
+.policy-main { width: min(900px, calc(100% - 40px)); margin: 0 auto; padding: 160px 0 110px; }
+.policy-document[hidden] { display: none; }
+.policy-hero { padding: 65px 0 75px; border-bottom: 1px solid rgba(156,166,106,.28); }
+.policy-hero h1 { max-width: none; margin-bottom: 24px; font-size: clamp(48px, 8vw, 86px); }
+.policy-lead { max-width: 680px; margin: 0; color: rgba(255,255,255,.65); font-size: 19px; }
+.policy-date { margin: 26px 0 0; color: var(--olive-light); font-size: 12px; }
+.policy-document > section { padding: 55px 0; border-bottom: 1px solid rgba(156,166,106,.18); }
+.policy-document > section h2 { margin-bottom: 22px; color: var(--olive-light); font-size: 28px; letter-spacing: -.025em; }
+.policy-document > section p, .policy-document > section li { color: rgba(255,255,255,.73); }
+.policy-document > section p { margin: 0 0 17px; }
+.policy-document > section p:last-child { margin-bottom: 0; }
+.policy-document ul { margin: 0; padding-left: 22px; }
+.policy-document li { margin-bottom: 9px; }
+.policy-document a { color: var(--olive-light); text-decoration: underline; text-underline-offset: 3px; }
+.policy-table-wrap { margin: 26px 0; overflow-x: auto; border: 1px solid rgba(156,166,106,.23); border-radius: 18px; }
+.policy-document table { width: 100%; border-collapse: collapse; min-width: 620px; }
+.policy-document th, .policy-document td { padding: 17px 20px; border-bottom: 1px solid rgba(156,166,106,.16); text-align: left; vertical-align: top; }
+.policy-document th { color: var(--olive-light); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+.policy-document td { color: rgba(255,255,255,.7); font-size: 14px; }
+.policy-document tbody tr:last-child td { border-bottom: 0; }
+.policy-document code { color: var(--olive-light); }
+.policy-cookie-button { margin-top: 10px; border: 1px solid var(--olive); border-radius: 12px; padding: 11px 16px; background: transparent; color: var(--olive-light); cursor: pointer; }
+.policy-cookie-button:hover { background: rgba(156,166,106,.12); }
+
+html[data-theme="light"] .policy-page { background: var(--white); color: var(--brown); }
+html[data-theme="light"] .policy-hero { border-bottom-color: rgba(36,21,15,.14); }
+html[data-theme="light"] .policy-lead, html[data-theme="light"] .policy-document > section p, html[data-theme="light"] .policy-document > section li { color: rgba(36,21,15,.7); }
+html[data-theme="light"] .policy-document > section { border-bottom-color: rgba(36,21,15,.12); }
+html[data-theme="light"] .policy-document > section h2, html[data-theme="light"] .policy-document a, html[data-theme="light"] .policy-document th, html[data-theme="light"] .policy-document code { color: #626a3f; }
+html[data-theme="light"] .policy-table-wrap { border-color: rgba(36,21,15,.15); }
+html[data-theme="light"] .policy-document th, html[data-theme="light"] .policy-document td { border-bottom-color: rgba(36,21,15,.1); }
+html[data-theme="light"] .policy-document td { color: rgba(36,21,15,.7); }
+html[data-theme="light"] .policy-date { color: #626a3f; }
+html[data-theme="light"] .policy-cookie-button { color: #626a3f; }
+
+@media (max-width: 680px) {
+  .policy-nav .brand > span:last-child { display: none; }
+  .policy-back span { display: none; }
+  .policy-main { width: min(100% - 30px, 900px); padding-top: 115px; }
+  .policy-hero { padding: 50px 0 55px; }
+  .policy-document > section { padding: 42px 0; }
+  .policy-document > section h2 { font-size: 24px; }
 }
