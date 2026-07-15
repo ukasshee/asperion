@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Asperion — pośrednictwo ubezpieczeniowe dla osób, rodzin i firm." />
+  <meta name="theme-color" content="#24150f" />
+  <title>Asperion — ubezpieczenia dobrane do Ciebie</title>
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem("asperion-theme") || "dark";
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Przejdź do treści</a>
+
+  <header class="nav-wrap">
+    <nav class="nav-island" aria-label="Główna nawigacja">
+      <a class="brand" href="#start" aria-label="Asperion — strona główna">
+        <img class="brand-logo" src="logo.png" alt="" width="151" height="171" />
+        <span>asperion</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Otwórz menu">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#oferta" data-i18n="navOffer">Oferta</a>
+        <a href="#proces" data-i18n="navProcess">Jak działamy</a>
+        <a href="#o-nas" data-i18n="navAbout">O nas</a>
+        <a href="#kontakt" data-i18n="navContact">Kontakt</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Włącz jasny motyw" title="Włącz jasny motyw">
+          <span class="theme-icon theme-sun" aria-hidden="true">☼</span>
+          <span class="theme-icon theme-moon" aria-hidden="true">◐</span>
+        </button>
+        <div class="language-switch" aria-label="Wybór języka">
+          <button type="button" class="lang active" data-lang="pl" aria-pressed="true">PL</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="lang" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="button button-small" href="#kontakt" data-i18n="navCta">Zapytaj o ofertę</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="start">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="heroEyebrow">POŚREDNICTWO UBEZPIECZENIOWE</p>
+          <h1 data-i18n="heroTitle">Spokój zaczyna się od <em>dobrej decyzji.</em></h1>
+          <p class="hero-lead" data-i18n="heroLead">Porównujemy rozwiązania, wyjaśniamy szczegóły i pomagamy wybrać ochronę, która naprawdę pasuje do Twojego życia lub biznesu.</p>
+          <div class="hero-actions">
+            <a class="button" href="#kontakt" data-i18n="heroCta">Porozmawiajmy</a>
+            <a class="text-link" href="#oferta"><span data-i18n="heroSecondary">Poznaj ofertę</span><span aria-hidden="true">↘</span></a>
+          </div>
+          <div class="trust-line">
+            <span class="trust-dot" aria-hidden="true"></span>
+            <span data-i18n="heroTrust">Jasne zasady. Ludzki język. Odpowiedzialne doradztwo.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Zakres ochrony">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="glass-card main-card">
+            <img class="hero-logo" src="logo.png" alt="" width="151" height="171" />
+            <p data-i18n="visualLabel">Twoja ochrona</p>
+            <strong data-i18n="visualValue">Dobrana świadomie</strong>
+          </div>
+          <div class="glass-card mini-card card-top">
+            <span class="mini-icon">⌂</span>
+            <span data-i18n="visualHome">Dom i majątek</span>
+          </div>
+          <div class="glass-card mini-card card-bottom">
+            <span class="mini-icon">✦</span>
+            <span data-i18n="visualBusiness">Firma i odpowiedzialność</span>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#oferta" aria-label="Przewiń do oferty"><span></span></a>
+    </section>
+
+    <section class="section offer" id="oferta">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow" data-i18n="offerEyebrow">OFERTA</p>
+            <h2 data-i18n="offerTitle">Ubezpieczenia dopasowane do Twoich potrzeb.</h2>
+          </div>
+          <p data-i18n="offerLead">Nie sprzedajemy gotowych odpowiedzi. Najpierw poznajemy potrzeby, później szukamy właściwego rozwiązania.</p>
+        </div>
+
+        <div class="offer-grid">
+          <article class="offer-card reveal">
+            <span class="card-number">01</span>
+            <div class="offer-icon">◉</div>
+            <h3 data-i18n="offer1Title">Komunikacyjne</h3>
+            <p data-i18n="offer1Text">OC, AC, NNW i assistance — ochrona kierowcy, pasażerów oraz pojazdu.</p>
+            <a href="#kontakt" data-i18n="learnMore">Dowiedz się więcej <span>→</span></a>
+          </article>
+          <article class="offer-card reveal">
+            <span class="card-number">02</span>
+            <div class="offer-icon">⌂</div>
+            <h3 data-i18n="offer2Title">Majątkowe</h3>
+            <p data-i18n="offer2Text">Ochrona domu, mieszkania, wyposażenia i odpowiedzialności w życiu prywatnym.</p>
+            <a href="#kontakt" data-i18n="learnMore">Dowiedz się więcej <span>→</span></a>
+          </article>
+          <article class="offer-card reveal">
+            <span class="card-number">03</span>
+            <div class="offer-icon">◇</div>
+            <h3 data-i18n="offer3Title">Życiowe</h3>
+            <p data-i18n="offer3Text">Finansowe wsparcie dla Ciebie i Twoich bliskich w nieprzewidzianych sytuacjach.</p>
+            <a href="#kontakt" data-i18n="learnMore">Dowiedz się więcej <span>→</span></a>
+          </article>
+          <article class="offer-card reveal">
+            <span class="card-number">04</span>
+            <div class="offer-icon">↗</div>
+            <h3 data-i18n="offer4Title">Firmowe</h3>
+            <p data-i18n="offer4Text">Ochrona majątku, pracowników, odpowiedzialności i ciągłości działania firmy.</p>
+            <a href="#kontakt" data-i18n="learnMore">Dowiedz się więcej <span>→</span></a>
+          </article>
+          <article class="offer-card reveal">
+            <span class="card-number">05</span>
+            <div class="offer-icon">+</div>
+            <h3 data-i18n="offer5Title">Zdrowotne</h3>
+            <p data-i18n="offer5Text">Dostęp do prywatnej opieki medycznej, specjalistów, badań i leczenia.</p>
+            <a href="#kontakt" data-i18n="learnMore">Dowiedz się więcej <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="proces">
+      <div class="container process-grid">
+        <div class="process-copy reveal">
+          <p class="eyebrow" data-i18n="processEyebrow">JAK DZIAŁAMY</p>
+          <h2 data-i18n="processTitle">Prościej, niż myślisz.</h2>
+          <p data-i18n="processLead">Bierzemy na siebie porównanie wariantów i formalności. Ty podejmujesz świadomą decyzję.</p>
+          <a class="button button-light" href="#kontakt" data-i18n="processCta">Zacznij od rozmowy</a>
+        </div>
+        <ol class="steps reveal">
+          <li><span>01</span><div><h3 data-i18n="step1Title">Rozmowa</h3><p data-i18n="step1Text">Poznajemy Twoją sytuację, cele i najważniejsze ryzyka.</p></div></li>
+          <li><span>02</span><div><h3 data-i18n="step2Title">Analiza</h3><p data-i18n="step2Text">Porównujemy dostępne rozwiązania i wskazujemy różnice.</p></div></li>
+          <li><span>03</span><div><h3 data-i18n="step3Title">Decyzja</h3><p data-i18n="step3Text">Wyjaśniamy warunki i pomagamy bezpiecznie przejść przez formalności.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section about" id="o-nas">
+      <div class="container about-grid">
+        <div class="about-statement reveal">
+          <p class="eyebrow" data-i18n="aboutEyebrow">ASPERION</p>
+          <h2 data-i18n="aboutTitle">Ubezpieczenia są złożone. Nasza rola to uczynić je zrozumiałymi.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p data-i18n="aboutText1">Łączymy znajomość rynku z indywidualnym podejściem. Patrzymy szerzej niż na samą cenę — liczy się zakres ochrony, wyłączenia i realne wsparcie wtedy, gdy jest potrzebne.</p>
+          <p data-i18n="aboutText2">Budujemy relacje oparte na zaufaniu, przejrzystości i odpowiedzialności.</p>
+          <div class="signature">asperion<span>.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontakt">
+      <div class="container contact-shell reveal">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contactEyebrow">KONTAKT</p>
+          <h2 data-i18n="contactTitle">Zacznijmy od krótkiej rozmowy.</h2>
+          <p data-i18n="contactLead">Opowiedz nam, czego potrzebujesz. Wrócimy z odpowiedzią i zaproponujemy kolejny krok.</p>
+          <div class="contact-details">
+            <div class="company-data">
+              <strong>ASPERION</strong>
+              <span data-i18n="companyType">Pośrednictwo Ubezpieczeniowe</span>
+            </div>
+            <dl>
+              <div><dt>NIP</dt><dd>556 244 11 08</dd></div>
+              <div><dt data-i18n="addressLabel">Adres</dt><dd>ul. Karola Darwina 62GE/2<br />31-764 Kraków</dd></div>
+              <div><dt data-i18n="phoneLabel">Telefon</dt><dd><a href="tel:+48519065392">519 065 392</a></dd></div>
+              <div><dt>E-mail</dt><dd><a href="mailto:ubezpieczenia@asperion.pl">ubezpieczenia@asperion.pl</a></dd></div>
+            </dl>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label><span data-i18n="formName">Imię i nazwisko</span><input type="text" name="name" autocomplete="name" required /></label>
+          <label><span data-i18n="formEmail">Adres e-mail</span><input type="email" name="email" autocomplete="email" required /></label>
+          <label><span data-i18n="formTopic">Czego dotyczy rozmowa?</span>
+            <select name="topic" required>
+              <option value="" data-i18n="formChoose">Wybierz temat</option>
+              <option value="motor" data-i18n="formMotor">Ubezpieczenia komunikacyjne</option>
+              <option value="property" data-i18n="formProperty">Ubezpieczenia majątkowe</option>
+              <option value="life" data-i18n="formLife">Ubezpieczenia życiowe</option>
+              <option value="health" data-i18n="formHealth">Ubezpieczenia zdrowotne</option>
+              <option value="business" data-i18n="formBusiness">Ubezpieczenia firmowe</option>
+              <option value="other" data-i18n="formOther">Inny temat</option>
+            </select>
+          </label>
+          <label><span data-i18n="formMessage">Wiadomość</span><textarea name="message" rows="3" required></textarea></label>
+          <label class="consent"><input type="checkbox" required /><span data-i18n="formConsent">Zgadzam się na kontakt w sprawie zapytania i akceptuję politykę prywatności.</span></label>
+          <button class="button button-light" type="submit" data-i18n="formSubmit">Wyślij zapytanie</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <a class="brand footer-brand" href="#start" aria-label="Asperion — strona główna"><img class="brand-logo" src="logo.png" alt="" width="151" height="171" /><span>asperion</span></a>
+      <p>© <span id="year"></span> Asperion. <span data-i18n="rights">Wszelkie prawa zastrzeżone.</span></p>
+      <div class="footer-links">
+        <a href="#" data-i18n="privacy">Polityka prywatności</a>
+        <a href="#" data-i18n="cookies">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
