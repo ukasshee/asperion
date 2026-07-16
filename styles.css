@@ -26,7 +26,8 @@ button { color: inherit; }
 
 .nav-wrap { position: fixed; z-index: 100; top: 22px; left: 0; width: 100%; pointer-events: none; }
 .nav-island { position: relative; width: min(1120px, calc(100% - 36px)); min-height: 70px; margin: auto; padding: 10px 12px 10px 18px; border: 1px solid rgba(255,255,255,.25); border-radius: 22px; background: rgba(36,21,15,.84); color: var(--white); box-shadow: 0 18px 50px rgba(20,10,7,.22); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); display: flex; align-items: center; justify-content: space-between; gap: 24px; pointer-events: auto; transition: transform .3s ease, background .3s ease; }
-.brand { display: flex; align-items: center; color: inherit; }
+.brand { display: flex; align-items: center; gap: 10px; color: inherit; }
+.brand-logo { display: block; width: auto; height: 43px; flex: 0 0 auto; object-fit: contain; }
 .brand-wordmark { display: inline-flex; align-items: flex-end; color: inherit; font: 700 27px/.9 "Segoe UI Variable Display", "Segoe UI", Arial, sans-serif; letter-spacing: -.065em; }
 .brand-dot { width: 9px; height: 9px; flex: 0 0 auto; margin: 0 0 1px 5px; border-radius: 50%; background: var(--olive); }
 .nav-links { display: flex; align-items: center; gap: 28px; font-size: 14px; }
@@ -108,6 +109,7 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .about-copy { padding-top: 55px; color: rgba(255,253,247,.67); font-size: 18px; }
 .about-copy p { margin: 0 0 22px; }
 .signature { margin-top: 50px; color: var(--white); }
+.signature .brand-logo { height: 54px; }
 .signature .brand-wordmark { font-size: 34px; }
 .signature .brand-dot { width: 11px; height: 11px; margin-left: 6px; }
 
@@ -142,6 +144,7 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 footer { padding: 42px 0; background: var(--brown-soft); border-top: 1px solid rgba(156,166,106,.16); }
 .footer-grid { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .footer-brand .brand-wordmark { font-size: 23px; }
+.footer-brand .brand-logo { height: 38px; }
 .footer-brand .brand-dot { width: 8px; height: 8px; margin-left: 4px; }
 footer p, .footer-links { font-size: 12px; opacity: .58; }
 .footer-links { display: flex; gap: 20px; }
@@ -214,6 +217,7 @@ html[data-theme="light"] .cookie-copy a { color: #626a3f; }
   .nav-wrap { top: 12px; }
   .nav-island { width: calc(100% - 20px); min-height: 62px; padding: 8px 9px 8px 14px; border-radius: 18px; gap: 10px; }
   .nav-island .brand-wordmark { font-size: 23px; }
+  .nav-island .brand-logo { height: 38px; }
   .nav-island .brand-dot { width: 8px; height: 8px; margin-left: 4px; }
   .nav-actions { gap: 9px; }
   .nav-actions .button-small { display: none; }
