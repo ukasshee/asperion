@@ -160,10 +160,13 @@ footer p, .footer-links { font-size: 12px; opacity: .58; }
 .powered-orbit::before { content: ""; position: absolute; inset: 3px; border: 1px dashed rgba(156,166,106,.46); border-radius: 50%; animation: powered-spin 8s linear infinite; }
 .powered-orbit span { width: 6px; height: 6px; border-radius: 50%; background: var(--olive); box-shadow: 0 0 0 4px rgba(156,166,106,.1), 0 0 14px rgba(156,166,106,.48); animation: powered-pulse 2.2s ease-in-out infinite; }
 .powered-label { opacity: .58; }
+.powered-brand-icon { display: grid; place-items: center; width: 23px; height: 23px; margin-left: 1px; border: 1px solid rgba(156,166,106,.34); border-radius: 8px; background: rgba(156,166,106,.1); transition: background .25s ease, transform .25s ease; }
+.powered-brand-icon img { display: block; width: 15px; height: 15px; filter: brightness(0) invert(1); }
 .powered-badge strong { color: inherit; font-size: 12px; letter-spacing: -.025em; }
 .powered-dot { color: var(--olive-light); }
 .powered-arrow { margin-left: 2px; color: var(--olive); font-size: 13px; transition: transform .25s ease; }
 .powered-badge:hover .powered-arrow { transform: translate(2px, -2px); }
+.powered-badge:hover .powered-brand-icon { background: rgba(156,166,106,.24); transform: rotate(-8deg) scale(1.06); }
 @keyframes powered-shine { 0%, 55% { left: -45%; } 85%, 100% { left: 125%; } }
 @keyframes powered-spin { to { transform: rotate(360deg); } }
 @keyframes powered-pulse { 0%, 100% { transform: scale(.85); opacity: .65; } 50% { transform: scale(1); opacity: 1; } }
@@ -204,6 +207,7 @@ html[data-theme="light"] footer { background: rgba(156,166,106,.13); color: var(
 html[data-theme="light"] .powered-wrap { border-top-color: rgba(36,21,15,.09); }
 html[data-theme="light"] .powered-badge { background: rgba(255,255,255,.45); color: rgba(36,21,15,.62); border-color: rgba(36,21,15,.13); }
 html[data-theme="light"] .powered-badge:hover { background: rgba(156,166,106,.14); color: var(--brown); border-color: var(--olive); }
+html[data-theme="light"] .powered-brand-icon { background: var(--brown); border-color: var(--brown); }
 html[data-theme="light"] .cookie-panel { background: rgba(255,253,247,.97); color: var(--brown); border-color: rgba(36,21,15,.16); box-shadow: 0 24px 80px rgba(36,21,15,.2); }
 html[data-theme="light"] .cookie-copy > p:not(.eyebrow) { color: rgba(36,21,15,.66); }
 html[data-theme="light"] .cookie-copy a { color: #626a3f; }
