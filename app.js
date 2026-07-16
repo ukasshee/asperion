@@ -1,7 +1,7 @@
 const translations = {
   pl: {
     skip: "Przejdź do treści", navOffer: "Oferta", navProcess: "Jak działamy", navAbout: "O nas", navContact: "Kontakt", navCta: "Zapytaj o ofertę",
-    heroEyebrow: "POŚREDNICTWO UBEZPIECZENIOWE", heroTitle: "Spokój zaczyna się od <em>dobrej decyzji.</em>", heroLead: "Porównujemy rozwiązania, wyjaśniamy szczegóły i pomagamy wybrać ochronę, która naprawdę pasuje do Twojego życia lub biznesu.", heroCta: "Porozmawiajmy", heroSecondary: "Poznaj ofertę", heroTrust: "Jasne zasady. Ludzki język. Odpowiedzialne doradztwo.",
+    heroEyebrow: "POŚREDNICTWO UBEZPIECZENIOWE", heroTitle: "Spokój zaczyna się od <em>dobrej decyzji.</em>", heroLead: "Porównujemy rozwiązania, wyjaśniamy szczegóły i pomagamy wybrać ochronę, która naprawdę pasuje do Twojego życia lub biznesu.", heroCta: "Porozmawiajmy", heroSecondary: "Poznaj ofertę", heroTrust: "Jasne zasady. Ludzki język. Odpowiedzialne doradztwo.", insurersLabel: "Wybrane towarzystwa ubezpieczeniowe",
     visualLabel: "Twoja ochrona", visualValue: "Dobrana świadomie", visualHome: "Dom i majątek", visualBusiness: "Firma i odpowiedzialność",
     offerEyebrow: "UBEZPIECZENIA", offerTitle: "Ubezpieczenia dopasowane do Twoich potrzeb.", offerLead: "Nie sprzedajemy gotowych odpowiedzi. Najpierw poznajemy potrzeby, później szukamy właściwego rozwiązania.",
     offer1Title: "Komunikacyjne", offer1Text: "OC, AC, NNW i assistance — ochrona kierowcy, pasażerów oraz pojazdu.", offer1Alt: "Oliwkowy samochód zaparkowany przed domem", offer2Title: "Majątkowe", offer2Text: "Ochrona domu, mieszkania, wyposażenia i odpowiedzialności w życiu prywatnym.", offer2Alt: "Oświetlony dom otoczony zielenią o zmierzchu", offer3Title: "Firmowe", offer3Text: "Ochrona majątku, pracowników, odpowiedzialności i ciągłości działania firmy.", offer3Alt: "Właściciele firmy omawiający plany przy stole", offer4Title: "Zdrowotne", offer4Text: "Dostęp do prywatnej opieki medycznej, specjalistów, badań i leczenia.", offer4Alt: "Lekarka podczas spokojnej konsultacji z pacjentką", learnMore: "Dowiedz się więcej <span>→</span>",
@@ -12,7 +12,7 @@ const translations = {
   },
   en: {
     skip: "Skip to content", navOffer: "Services", navProcess: "How it works", navAbout: "About us", navContact: "Contact", navCta: "Request a quote",
-    heroEyebrow: "INSURANCE BROKERAGE", heroTitle: "Peace of mind starts with <em>the right decision.</em>", heroLead: "We compare solutions, explain the details and help you choose protection that truly fits your life or business.", heroCta: "Let's talk", heroSecondary: "Explore our services", heroTrust: "Clear terms. Plain language. Responsible advice.",
+    heroEyebrow: "INSURANCE BROKERAGE", heroTitle: "Peace of mind starts with <em>the right decision.</em>", heroLead: "We compare solutions, explain the details and help you choose protection that truly fits your life or business.", heroCta: "Let's talk", heroSecondary: "Explore our services", heroTrust: "Clear terms. Plain language. Responsible advice.", insurersLabel: "Selected insurance companies",
     visualLabel: "Your protection", visualValue: "Chosen with confidence", visualHome: "Home and property", visualBusiness: "Business and liability",
     offerEyebrow: "INSURANCE", offerTitle: "Insurance tailored to your needs.", offerLead: "We do not sell ready-made answers. First we understand your needs, then we look for the right solution.",
     offer1Title: "Motor", offer1Text: "Third-party liability, comprehensive cover, accident insurance and assistance for drivers, passengers and vehicles.", offer1Alt: "Olive-green car parked in front of a home", offer2Title: "Property", offer2Text: "Protection for your house, apartment, belongings and personal liability.", offer2Alt: "A warmly lit home surrounded by greenery at dusk", offer3Title: "Business", offer3Text: "Protection for company assets, employees, liability and business continuity.", offer3Alt: "Business owners discussing plans at a table", offer4Title: "Health", offer4Text: "Access to private medical care, specialists, diagnostic tests and treatment.", offer4Alt: "Doctor during a calm consultation with a patient", learnMore: "Learn more <span>→</span>",
@@ -57,6 +57,11 @@ function setLanguage(lang, persist = true) {
   document.querySelectorAll("[data-i18n-alt]").forEach((node) => {
     const value = translations[lang][node.dataset.i18nAlt];
     if (value) node.setAttribute("alt", value);
+  });
+
+  document.querySelectorAll("[data-i18n-aria]").forEach((node) => {
+    const value = translations[lang][node.dataset.i18nAria];
+    if (value) node.setAttribute("aria-label", value);
   });
 
   document.querySelectorAll(".lang").forEach((button) => {
