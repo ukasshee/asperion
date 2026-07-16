@@ -3,7 +3,6 @@ import nodemailer from "nodemailer";
 const topics = {
   motor: "Ubezpieczenia komunikacyjne",
   property: "Ubezpieczenia majątkowe",
-  life: "Ubezpieczenia życiowe",
   health: "Ubezpieczenia zdrowotne",
   business: "Ubezpieczenia firmowe",
   other: "Inny temat"
