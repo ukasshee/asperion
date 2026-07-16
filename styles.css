@@ -188,8 +188,6 @@ footer p, .footer-links { font-size: 12px; opacity: .58; }
 .powered-brand-icon svg { display: block; width: 21px; height: 21px; overflow: visible; }
 .powered-badge strong { color: inherit; font-size: 12px; letter-spacing: -.025em; }
 .powered-dot { color: var(--olive-light); }
-.powered-arrow { margin-left: 2px; color: var(--olive); font-size: 13px; transition: transform .25s ease; }
-.powered-badge:hover .powered-arrow { transform: translate(2px, -2px); }
 .powered-badge:hover .powered-brand-icon { background: rgba(156,166,106,.24); transform: rotate(-8deg) scale(1.06); }
 @keyframes powered-shine { 0%, 55% { left: -45%; } 85%, 100% { left: 125%; } }
 
