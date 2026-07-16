@@ -160,8 +160,8 @@ footer p, .footer-links { font-size: 12px; opacity: .58; }
 .powered-orbit::before { content: ""; position: absolute; inset: 3px; border: 1px dashed rgba(156,166,106,.46); border-radius: 50%; animation: powered-spin 8s linear infinite; }
 .powered-orbit span { width: 6px; height: 6px; border-radius: 50%; background: var(--olive); box-shadow: 0 0 0 4px rgba(156,166,106,.1), 0 0 14px rgba(156,166,106,.48); animation: powered-pulse 2.2s ease-in-out infinite; }
 .powered-label { opacity: .58; }
-.powered-brand-icon { display: grid; place-items: center; width: 23px; height: 23px; margin-left: 1px; border: 1px solid rgba(156,166,106,.34); border-radius: 8px; background: rgba(156,166,106,.1); transition: background .25s ease, transform .25s ease; }
-.powered-brand-icon img { display: block; width: 15px; height: 15px; filter: brightness(0) invert(1); }
+.powered-brand-icon { display: grid; place-items: center; width: 23px; height: 23px; margin-left: 1px; border: 1px solid rgba(156,166,106,.34); border-radius: 8px; background: rgba(156,166,106,.1); color: var(--white); transition: background .25s ease, transform .25s ease; }
+.powered-brand-icon svg { display: block; width: 15px; height: 15px; overflow: visible; }
 .powered-badge strong { color: inherit; font-size: 12px; letter-spacing: -.025em; }
 .powered-dot { color: var(--olive-light); }
 .powered-arrow { margin-left: 2px; color: var(--olive); font-size: 13px; transition: transform .25s ease; }
