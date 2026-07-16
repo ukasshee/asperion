@@ -124,7 +124,18 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .contact-shell { padding: 70px; border: 1px solid rgba(156,166,106,.35); border-radius: 36px; background: var(--brown); color: var(--white); display: grid; grid-template-columns: .85fr 1.15fr; gap: 90px; box-shadow: var(--shadow); }
 .contact-copy h2 { font-size: clamp(40px, 4vw, 58px); }
 .contact-copy > p:not(.eyebrow) { color: rgba(255,255,255,.62); }
-.contact-details { margin-top: 55px; }
+.call-action { margin-top: 36px; }
+.call-button { display: flex; align-items: center; gap: 14px; width: 100%; min-height: 72px; padding: 0 22px; border: 1px solid var(--olive); border-radius: 20px; background: var(--olive); color: var(--brown); font-weight: 750; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.call-button svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.call-button span:nth-child(2) { font-size: 17px; }
+.call-button span:last-child { margin-left: auto; font-size: 22px; transition: transform .2s ease; }
+.call-button:hover { transform: translateY(-2px); background: var(--olive-light); box-shadow: 0 14px 36px rgba(156,166,106,.2); }
+.call-button:hover span:last-child { transform: translateX(4px); }
+.call-number { margin: 13px 0 0; padding: 15px 18px; border: 1px solid rgba(156,166,106,.32); border-radius: 15px; background: rgba(156,166,106,.08); color: rgba(255,255,255,.6); font-size: 12px; animation: call-number-in .25s ease both; }
+.call-number[hidden] { display: none; }
+.call-number strong { display: block; margin-top: 3px; color: var(--white); font-size: 25px; letter-spacing: .02em; }
+@keyframes call-number-in { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+.contact-details { margin-top: 24px; }
 .company-data { display: flex; flex-direction: column; gap: 3px; margin-bottom: 28px; }
 .company-data strong { color: var(--olive-light); font: 700 21px "Segoe UI Variable Display", "Segoe UI", sans-serif; letter-spacing: .04em; }
 .company-data span { color: rgba(255,255,255,.56); font-size: 13px; }
