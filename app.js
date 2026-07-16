@@ -1,3 +1,7 @@
+const FEATURES = Object.freeze({
+  insurerMarquee: false
+});
+
 const translations = {
   pl: {
     skip: "Przejdź do treści", navOffer: "Oferta", navProcess: "Jak działamy", navAbout: "O nas", navContact: "Kontakt", navCta: "Zapytaj o ofertę",
@@ -95,6 +99,9 @@ document.querySelectorAll('.nav-links a').forEach((link) => link.addEventListene
   links.classList.remove("open");
   document.body.classList.remove("menu-open");
 }));
+
+const insurerMarquee = document.querySelector(".insurer-marquee");
+if (insurerMarquee) insurerMarquee.hidden = !FEATURES.insurerMarquee;
 
 document.querySelector("[data-call-button]")?.addEventListener("click", (event) => {
   const mobileUserAgent = navigator.userAgentData?.mobile;

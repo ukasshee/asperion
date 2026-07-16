@@ -12,6 +12,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 html { color-scheme: dark; }
 html[data-theme="light"] { color-scheme: light; }
