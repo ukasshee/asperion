@@ -120,7 +120,7 @@ export async function POST(request) {
       replyTo: { name, address: email },
       subject: `[asperion.pl] ${topicLabel} — ${name}`,
       text: `Nowe zapytanie z asperion.pl\n\nImię i nazwisko: ${name}\nE-mail: ${email}\nTemat: ${topicLabel}\nJęzyk strony: ${lang}\n\nWiadomość:\n${message}`,
-      html: `<div style="font-family:Arial,sans-serif;color:#24150f;line-height:1.55"><h2 style="margin:0 0 20px">Nowe zapytanie z asperion.pl</h2><p><strong>Imię i nazwisko:</strong> ${safeName}<br><strong>E-mail:</strong> ${safeEmail}<br><strong>Temat:</strong> ${escapeHtml(topicLabel)}<br><strong>Język strony:</strong> ${lang}</p><p><strong>Wiadomość:</strong><br>${safeMessage}</p></div>`
+      html: `<div style="font-family:Arial,sans-serif;color:#3a1d11;line-height:1.55"><h2 style="margin:0 0 20px">Nowe zapytanie z asperion.pl</h2><p><strong>Imię i nazwisko:</strong> ${safeName}<br><strong>E-mail:</strong> ${safeEmail}<br><strong>Temat:</strong> ${escapeHtml(topicLabel)}<br><strong>Język strony:</strong> ${lang}</p><p><strong>Wiadomość:</strong><br>${safeMessage}</p></div>`
     });
     return json({ ok: true });
   } catch (error) {

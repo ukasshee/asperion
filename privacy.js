@@ -17,7 +17,7 @@ function setPrivacyTheme(theme, persist = true) {
   privacyTheme = theme;
   document.documentElement.dataset.theme = theme;
   if (persist) localStorage.setItem("asperion-theme", theme);
-  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#24150f" : "#fffdf7";
+  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#3a1d11" : "#fffdf7";
   updatePrivacyThemeLabel();
 }
 
