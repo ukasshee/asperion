@@ -24,7 +24,7 @@ const translations = {
 };
 
 let currentLang = localStorage.getItem("asperion-lang") || "pl";
-let currentTheme = localStorage.getItem("asperion-theme") || "dark";
+let currentTheme = localStorage.getItem("asperion-theme") || "light";
 
 function updateThemeLabel() {
   const themeButton = document.querySelector(".theme-toggle");

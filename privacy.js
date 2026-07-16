@@ -4,7 +4,7 @@ const privacyUi = {
 };
 
 let privacyLang = localStorage.getItem("asperion-lang") || "pl";
-let privacyTheme = localStorage.getItem("asperion-theme") || "dark";
+let privacyTheme = localStorage.getItem("asperion-theme") || "light";
 
 function updatePrivacyThemeLabel() {
   const button = document.querySelector(".theme-toggle");
