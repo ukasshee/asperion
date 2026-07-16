@@ -179,6 +179,7 @@
           </div>
         </div>
         <form class="contact-form" id="contact-form">
+          <div class="form-honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
           <label><span data-i18n="formName">Imię i nazwisko</span><input type="text" name="name" autocomplete="name" required /></label>
           <label><span data-i18n="formEmail">Adres e-mail</span><input type="email" name="email" autocomplete="email" required /></label>
           <label><span data-i18n="formTopic">Czego dotyczy rozmowa?</span>
@@ -194,7 +195,7 @@
           </label>
           <label><span data-i18n="formMessage">Wiadomość</span><textarea name="message" rows="3" required></textarea></label>
           <p class="form-privacy-note" data-i18n="formSensitive">Nie podawaj w formularzu danych medycznych ani innych danych wrażliwych.</p>
-          <label class="consent"><input type="checkbox" required /><span data-i18n="formConsent">Potwierdzam zapoznanie się z <a href="privacy.html">polityką prywatności</a>.</span></label>
+          <label class="consent"><input type="checkbox" name="consent" required /><span data-i18n="formConsent">Potwierdzam zapoznanie się z <a href="privacy.html">polityką prywatności</a>.</span></label>
           <button class="button button-light" type="submit" data-i18n="formSubmit">Wyślij zapytanie</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
