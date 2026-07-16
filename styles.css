@@ -108,7 +108,13 @@ h1 em { font-family: Georgia, serif; font-weight: 400; }
 .about { background: var(--brown); }
 .about-copy { padding-top: 55px; color: rgba(255,253,247,.67); font-size: 18px; }
 .about-copy p { margin: 0 0 22px; }
-.signature { margin-top: 50px; color: var(--white); }
+.about-company { margin-top: 38px; padding: 25px 27px; border: 1px solid rgba(156,166,106,.3); border-radius: 20px; background: rgba(156,166,106,.07); }
+.about-company .company-data { margin-bottom: 20px; }
+.about-company dl { display: grid; gap: 13px; margin: 0; }
+.about-company dl > div { display: grid; grid-template-columns: 70px 1fr; gap: 12px; }
+.about-company dt { color: rgba(255,255,255,.43); font-size: 12px; }
+.about-company dd { margin: 0; color: rgba(255,255,255,.82); font-size: 14px; line-height: 1.55; }
+.signature { margin-top: 38px; color: var(--white); }
 .signature .brand-logo { height: 54px; }
 .signature .brand-wordmark { font-size: 34px; }
 .signature .brand-dot { width: 11px; height: 11px; margin-left: 6px; }
@@ -201,6 +207,10 @@ html[data-theme="light"] .steps li { border-color: rgba(36,21,15,.16); }
 html[data-theme="light"] .steps li:last-child { border-bottom-color: rgba(36,21,15,.16); }
 html[data-theme="light"] .about { background: var(--white); }
 html[data-theme="light"] .about-copy { color: rgba(36,21,15,.67); }
+html[data-theme="light"] .about-company { background: rgba(156,166,106,.1); border-color: rgba(36,21,15,.14); }
+html[data-theme="light"] .about-company dt { color: rgba(36,21,15,.48); }
+html[data-theme="light"] .about-company dd { color: rgba(36,21,15,.82); }
+html[data-theme="light"] .about-company .company-data span { color: rgba(36,21,15,.58); }
 html[data-theme="light"] .signature { color: var(--brown); }
 html[data-theme="light"] .contact { background: rgba(156,166,106,.13); }
 html[data-theme="light"] footer { background: rgba(156,166,106,.13); color: var(--brown); border-top-color: rgba(36,21,15,.1); }
