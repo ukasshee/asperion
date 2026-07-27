@@ -2,14 +2,14 @@ const cookieTranslations = {
   pl: {
     eyebrow: "PRYWATNOŚĆ",
     title: "Ta strona szanuje Twoją prywatność",
-    text: "Używamy wyłącznie niezbędnej pamięci lokalnej, aby zapamiętać język, motyw i potwierdzenie tego komunikatu. Nie używamy cookies analitycznych ani reklamowych.",
+    text: "Używamy wyłącznie niezbędnej pamięci lokalnej do ustawień strony. Dane z formularza — imię i nazwisko, e-mail, numer telefonu i wiadomość — nie są zapisywane w cookies ani localStorage.",
     details: "Dowiedz się więcej",
     confirm: "Rozumiem"
   },
   en: {
     eyebrow: "PRIVACY",
     title: "This website respects your privacy",
-    text: "We only use necessary local storage to remember your language, theme and acknowledgement of this notice. We do not use analytics or advertising cookies.",
+    text: "We only use necessary local storage for website settings. Form data — your name, email, telephone number and message — is not stored in cookies or local storage.",
     details: "Learn more",
     confirm: "Understood"
   }
@@ -17,6 +17,16 @@ const cookieTranslations = {
 
 const cookiePanel = document.querySelector("#cookie-panel");
 const cookieConsentKey = "asperion-cookie-notice";
+const cookieNoticeVersion = "2026-07-27";
+
+function hasAcknowledgedCurrentNotice() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(cookieConsentKey));
+    return saved?.acknowledged === true && saved.version === cookieNoticeVersion;
+  } catch {
+    return false;
+  }
+}
 
 function updateCookieLanguage(lang = document.documentElement.lang || "pl") {
   const selected = cookieTranslations[lang] || cookieTranslations.pl;
@@ -38,7 +48,7 @@ function openCookiePanel() {
 }
 
 document.querySelector("[data-cookie-confirm]")?.addEventListener("click", () => {
-  localStorage.setItem(cookieConsentKey, JSON.stringify({ acknowledged: true, version: "2026-07-16" }));
+  localStorage.setItem(cookieConsentKey, JSON.stringify({ acknowledged: true, version: cookieNoticeVersion }));
   cookiePanel.hidden = true;
 });
 
@@ -49,4 +59,4 @@ document.querySelectorAll("[data-open-cookie-settings]").forEach((button) => {
 document.addEventListener("asperion:language", (event) => updateCookieLanguage(event.detail.lang));
 
 updateCookieLanguage();
-if (!localStorage.getItem(cookieConsentKey)) openCookiePanel();
+if (!hasAcknowledgedCurrentNotice()) openCookiePanel();
