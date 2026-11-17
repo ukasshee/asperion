@@ -60,7 +60,7 @@ html[data-theme="light"] .theme-moon { opacity: 1; transform: rotate(0) scale(1)
 .hero::before { content: ""; position: absolute; z-index: 2; inset: 0; opacity: .05; background-image: radial-gradient(circle at center, var(--white) 0 1px, transparent 1.5px); background-size: 26px 26px; mask-image: linear-gradient(to right, black, transparent 64%); pointer-events: none; }
 .hero::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(63,58,52,.98) 0%, rgba(63,58,52,.93) 32%, rgba(63,58,52,.58) 57%, rgba(63,58,52,.12) 100%); pointer-events: none; }
 .hero-image { position: absolute; z-index: 0; inset: 0; background: url("hero-family-home-car.jpg") 58% center / cover no-repeat; transform: scale(1.01); }
-.hero-insurers { position: relative; z-index: 3; width: min(760px, 72vw); height: 48px; margin: 0 auto 28px; overflow: hidden; }
+.hero-insurers { position: relative; z-index: 3; width: min(760px, 72vw); height: 48px; margin: 0 0 28px; overflow: hidden; }
 .insurer-viewport { height: 100%; min-width: 0; overflow: hidden; mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, black 18%, black 82%, rgba(0,0,0,.35) 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, black 18%, black 82%, rgba(0,0,0,.35) 92%, transparent 100%); }
 .insurer-track { display: flex; width: max-content; height: 100%; animation: insurer-scroll 40s linear infinite; will-change: transform; }
 .insurer-set { display: flex; align-items: center; gap: 30px; padding-right: 30px; }
