@@ -72,14 +72,18 @@ export async function POST(request) {
 
   const name = clean(data.name);
   const email = clean(data.email).toLowerCase();
+  const phone = clean(data.phone);
   const topic = clean(data.topic);
   const message = clean(data.message);
   const lang = data.lang === "en" ? "EN" : "PL";
   const emailPattern = /^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,}$/;
+  const phonePattern = /^[+()\d\s.-]{7,30}$/;
+  const phoneDigits = phone.replace(/\D/g, "");
 
   if (
     name.length < 2 || name.length > 100 ||
     !emailPattern.test(email) || email.length > 254 ||
+    !phonePattern.test(phone) || phoneDigits.length < 7 || phoneDigits.length > 15 ||
     !Object.hasOwn(topics, topic) ||
     message.length < 10 || message.length > 3000 ||
     data.consent !== true
@@ -109,6 +113,7 @@ export async function POST(request) {
 
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
+  const safePhone = escapeHtml(phone);
   const safeMessage = escapeHtml(message).replace(/\n/g, "<br>");
   const topicLabel = topics[topic];
   const recipient = process.env.SMTP_TO || process.env.SMTP_USER;
@@ -119,8 +124,8 @@ export async function POST(request) {
       to: recipient,
       replyTo: { name, address: email },
       subject: `[asperion.pl] ${topicLabel} — ${name}`,
-      text: `Nowe zapytanie z asperion.pl\n\nImię i nazwisko: ${name}\nE-mail: ${email}\nTemat: ${topicLabel}\nJęzyk strony: ${lang}\n\nWiadomość:\n${message}`,
-      html: `<div style="font-family:Arial,sans-serif;color:#3f3a34;line-height:1.55"><h2 style="margin:0 0 20px">Nowe zapytanie z asperion.pl</h2><p><strong>Imię i nazwisko:</strong> ${safeName}<br><strong>E-mail:</strong> ${safeEmail}<br><strong>Temat:</strong> ${escapeHtml(topicLabel)}<br><strong>Język strony:</strong> ${lang}</p><p><strong>Wiadomość:</strong><br>${safeMessage}</p></div>`
+      text: `Nowe zapytanie z asperion.pl\n\nImię i nazwisko: ${name}\nE-mail: ${email}\nTelefon: ${phone}\nTemat: ${topicLabel}\nJęzyk strony: ${lang}\n\nWiadomość:\n${message}`,
+      html: `<div style="font-family:Arial,sans-serif;color:#3f3a34;line-height:1.55"><h2 style="margin:0 0 20px">Nowe zapytanie z asperion.pl</h2><p><strong>Imię i nazwisko:</strong> ${safeName}<br><strong>E-mail:</strong> ${safeEmail}<br><strong>Telefon:</strong> ${safePhone}<br><strong>Temat:</strong> ${escapeHtml(topicLabel)}<br><strong>Język strony:</strong> ${lang}</p><p><strong>Wiadomość:</strong><br>${safeMessage}</p></div>`
     });
     return json({ ok: true });
   } catch (error) {

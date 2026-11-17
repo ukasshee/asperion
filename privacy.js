@@ -4,7 +4,7 @@ const privacyUi = {
 };
 
 let privacyLang = localStorage.getItem("asperion-lang") || "pl";
-let privacyTheme = localStorage.getItem("asperion-theme") || "light";
+let privacyTheme = localStorage.getItem("asperion-theme-v2") || "light";
 
 function updatePrivacyThemeLabel() {
   const button = document.querySelector(".theme-toggle");
@@ -16,8 +16,8 @@ function updatePrivacyThemeLabel() {
 function setPrivacyTheme(theme, persist = true) {
   privacyTheme = theme;
   document.documentElement.dataset.theme = theme;
-  if (persist) localStorage.setItem("asperion-theme", theme);
-  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#3f3a34" : "#fffdf7";
+  if (persist) localStorage.setItem("asperion-theme-v2", theme);
+  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#493d35" : "#fbf8f3";
   updatePrivacyThemeLabel();
 }
 

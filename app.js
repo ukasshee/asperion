@@ -1,34 +1,30 @@
-const FEATURES = Object.freeze({
-  insurerMarquee: false
-});
-
 const translations = {
   pl: {
     skip: "Przejdź do treści", navOffer: "Oferta", navProcess: "Jak działamy", navAbout: "O nas", navContact: "Kontakt", navCta: "Zapytaj o ofertę",
-    heroEyebrow: "POŚREDNICTWO UBEZPIECZENIOWE", heroTitle: "Spokój zaczyna się od <em>dobrej decyzji.</em>", heroLead: "Porównujemy rozwiązania, wyjaśniamy szczegóły i pomagamy wybrać ochronę, która naprawdę pasuje do Twojego życia lub biznesu.", heroCta: "Porozmawiajmy", heroSecondary: "Poznaj ofertę", heroTrust: "Jasne zasady. Ludzki język. Odpowiedzialne doradztwo.", insurersLabel: "Wybrane towarzystwa ubezpieczeniowe",
+    heroEyebrow: "POŚREDNICTWO UBEZPIECZENIOWE", heroTitle: "Spokój zaczyna się od <em>dobrej decyzji.</em>", heroLead: "Jako pośrednictwo ubezpieczeniowe w Krakowie porównujemy rozwiązania, wyjaśniamy szczegóły i pomagamy wybrać ochronę dopasowaną do Ciebie lub Twojej firmy.", heroCta: "Porozmawiajmy", heroSecondary: "Poznaj ofertę", heroTrust: "Jasne zasady. Ludzki język. Odpowiedzialne doradztwo.", insurersLabel: "Wybrane towarzystwa ubezpieczeniowe",
     visualLabel: "Twoja ochrona", visualValue: "Dobrana świadomie", visualHome: "Dom i majątek", visualBusiness: "Firma i odpowiedzialność",
     offerEyebrow: "UBEZPIECZENIA", offerTitle: "Ubezpieczenia dopasowane do Twoich potrzeb.", offerLead: "Nie sprzedajemy gotowych odpowiedzi. Najpierw poznajemy potrzeby, później szukamy właściwego rozwiązania.",
     offer1Title: "Komunikacyjne", offer1Text: "OC, AC, NNW i assistance — ochrona kierowcy, pasażerów oraz pojazdu.", offer1Alt: "Oliwkowy samochód zaparkowany przed domem", offer2Title: "Majątkowe", offer2Text: "Ochrona domu, mieszkania, wyposażenia i odpowiedzialności w życiu prywatnym.", offer2Alt: "Oświetlony dom otoczony zielenią o zmierzchu", offer3Title: "Firmowe", offer3Text: "Ochrona majątku, pracowników, odpowiedzialności i ciągłości działania firmy.", offer3Alt: "Właściciele firmy omawiający plany przy stole", offer4Title: "Zdrowotne", offer4Text: "Dostęp do prywatnej opieki medycznej, specjalistów, badań i leczenia.", offer4Alt: "Lekarka podczas spokojnej konsultacji z pacjentką", learnMore: "Dowiedz się więcej <span>→</span>",
     processEyebrow: "JAK DZIAŁAMY", processTitle: "Prościej, niż myślisz.", processLead: "Bierzemy na siebie porównanie wariantów i formalności. Ty podejmujesz świadomą decyzję.", processCta: "Zacznij od rozmowy", step1Title: "Rozmowa", step1Text: "Poznajemy Twoją sytuację, cele i najważniejsze ryzyka.", step2Title: "Analiza", step2Text: "Porównujemy dostępne rozwiązania i wskazujemy różnice.", step3Title: "Decyzja", step3Text: "Wyjaśniamy warunki i pomagamy bezpiecznie przejść przez formalności.",
     aboutEyebrow: "ASPERION", aboutTitle: "Ubezpieczenia są złożone. Nasza rola to uczynić je zrozumiałymi.", aboutText1: "Łączymy znajomość rynku z indywidualnym podejściem. Patrzymy szerzej niż na samą cenę — liczy się zakres ochrony, wyłączenia i realne wsparcie wtedy, gdy jest potrzebne.", aboutText2: "Budujemy relacje oparte na zaufaniu, przejrzystości i odpowiedzialności.",
-    contactEyebrow: "KONTAKT", contactTitle: "Napisz do nas lub zadzwoń", contactLead: "Opowiedz nam, czego potrzebujesz. Wrócimy z odpowiedzią i zaproponujemy kolejny krok.", companyType: "Pośrednictwo Ubezpieczeniowe", addressLabel: "Adres", phoneLabel: "Telefon", callNow: "Zadzwoń teraz", formHeading: "Formularz kontaktowy", formName: "Imię i nazwisko", formEmail: "Adres e-mail", formTopic: "Czego dotyczy rozmowa?", formChoose: "Wybierz temat", formMotor: "Ubezpieczenia komunikacyjne", formProperty: "Ubezpieczenia majątkowe", formHealth: "Ubezpieczenia zdrowotne", formBusiness: "Ubezpieczenia firmowe", formOther: "Inny temat", formMessage: "Wiadomość", formSensitive: "Nie podawaj w formularzu danych medycznych ani innych danych wrażliwych.", formConsent: "Potwierdzam zapoznanie się z <a href=\"privacy.html\">polityką prywatności</a>.", formSubmit: "Wyślij zapytanie", formSending: "Wysyłanie…", formSuccess: "Dziękujemy! Wiadomość została wysłana. Odpowiemy najszybciej, jak to możliwe.", formError: "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na ubezpieczenia@asperion.pl.", formRateLimit: "Wysłano zbyt wiele zapytań. Spróbuj ponownie za kilka minut.", rights: "Wszelkie prawa zastrzeżone.", privacy: "Polityka prywatności", cookies: "Cookies",
-    themeToLight: "Włącz jasny motyw", themeToDark: "Włącz ciemny motyw", title: "Asperion — ubezpieczenia dobrane do Ciebie", description: "Asperion — pośrednictwo ubezpieczeniowe dla osób, rodzin i firm."
+    contactEyebrow: "KONTAKT", contactTitle: "Napisz do nas lub zadzwoń", contactLead: "Opowiedz nam, czego potrzebujesz. Wrócimy z odpowiedzią i zaproponujemy kolejny krok.", companyType: "Pośrednictwo Ubezpieczeniowe", addressLabel: "Adres", phoneLabel: "Telefon", callNow: "Zadzwoń teraz", formHeading: "Formularz kontaktowy", formName: "Imię i nazwisko", formEmail: "Adres e-mail", formPhone: "Numer telefonu", formTopic: "Czego dotyczy rozmowa?", formChoose: "Wybierz temat", formMotor: "Ubezpieczenia komunikacyjne", formProperty: "Ubezpieczenia majątkowe", formHealth: "Ubezpieczenia zdrowotne", formBusiness: "Ubezpieczenia firmowe", formOther: "Inny temat", formMessage: "Wiadomość", formSensitive: "Nie podawaj w formularzu danych medycznych ani innych danych wrażliwych.", formConsent: "Potwierdzam zapoznanie się z <a href=\"privacy.html\">polityką prywatności</a>.", formSubmit: "Wyślij zapytanie", formSending: "Wysyłanie…", formSuccess: "Dziękujemy! Wiadomość została wysłana. Odpowiemy najszybciej, jak to możliwe.", formError: "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na ubezpieczenia@asperion.pl.", formRateLimit: "Wysłano zbyt wiele zapytań. Spróbuj ponownie za kilka minut.", rights: "Wszelkie prawa zastrzeżone.", privacy: "Polityka prywatności", cookies: "Cookies",
+    themeToLight: "Włącz jasny motyw", themeToDark: "Włącz ciemny motyw", title: "Ubezpieczenia Kraków dla Ciebie i firmy | Asperion", description: "Asperion to pośrednictwo ubezpieczeniowe w Krakowie. Porównujemy ubezpieczenia komunikacyjne, majątkowe, firmowe i zdrowotne."
   },
   en: {
     skip: "Skip to content", navOffer: "Services", navProcess: "How it works", navAbout: "About us", navContact: "Contact", navCta: "Request a quote",
-    heroEyebrow: "INSURANCE BROKERAGE", heroTitle: "Peace of mind starts with <em>the right decision.</em>", heroLead: "We compare solutions, explain the details and help you choose protection that truly fits your life or business.", heroCta: "Let's talk", heroSecondary: "Explore our services", heroTrust: "Clear terms. Plain language. Responsible advice.", insurersLabel: "Selected insurance companies",
+    heroEyebrow: "INSURANCE BROKERAGE", heroTitle: "Peace of mind starts with <em>the right decision.</em>", heroLead: "As an insurance broker in Kraków, we compare solutions, explain the details and help you choose protection tailored to you or your business.", heroCta: "Let's talk", heroSecondary: "Explore our services", heroTrust: "Clear terms. Plain language. Responsible advice.", insurersLabel: "Selected insurance companies",
     visualLabel: "Your protection", visualValue: "Chosen with confidence", visualHome: "Home and property", visualBusiness: "Business and liability",
     offerEyebrow: "INSURANCE", offerTitle: "Insurance tailored to your needs.", offerLead: "We do not sell ready-made answers. First we understand your needs, then we look for the right solution.",
     offer1Title: "Motor", offer1Text: "Third-party liability, comprehensive cover, accident insurance and assistance for drivers, passengers and vehicles.", offer1Alt: "Olive-green car parked in front of a home", offer2Title: "Property", offer2Text: "Protection for your house, apartment, belongings and personal liability.", offer2Alt: "A warmly lit home surrounded by greenery at dusk", offer3Title: "Business", offer3Text: "Protection for company assets, employees, liability and business continuity.", offer3Alt: "Business owners discussing plans at a table", offer4Title: "Health", offer4Text: "Access to private medical care, specialists, diagnostic tests and treatment.", offer4Alt: "Doctor during a calm consultation with a patient", learnMore: "Learn more <span>→</span>",
     processEyebrow: "HOW IT WORKS", processTitle: "Simpler than you think.", processLead: "We take care of comparing options and paperwork. You make an informed decision.", processCta: "Start with a conversation", step1Title: "Conversation", step1Text: "We learn about your situation, goals and key risks.", step2Title: "Analysis", step2Text: "We compare available solutions and highlight the differences.", step3Title: "Decision", step3Text: "We explain the terms and guide you safely through the formalities.",
     aboutEyebrow: "ASPERION", aboutTitle: "Insurance is complex. Our role is to make it clear.", aboutText1: "We combine market knowledge with a personal approach. We look beyond price — coverage, exclusions and genuine support when it matters are what count.", aboutText2: "We build relationships based on trust, transparency and responsibility.",
-    contactEyebrow: "CONTACT", contactTitle: "Write to us or give us a call", contactLead: "Tell us what you need. We will get back to you and suggest the next step.", companyType: "Insurance Brokerage", addressLabel: "Address", phoneLabel: "Phone", callNow: "Call now", formHeading: "Contact form", formName: "Full name", formEmail: "Email address", formTopic: "What would you like to discuss?", formChoose: "Choose a topic", formMotor: "Motor insurance", formProperty: "Property insurance", formHealth: "Health insurance", formBusiness: "Business insurance", formOther: "Other", formMessage: "Message", formSensitive: "Do not include medical information or other sensitive data in this form.", formConsent: "I confirm that I have read the <a href=\"privacy.html\">privacy policy</a>.", formSubmit: "Send enquiry", formSending: "Sending…", formSuccess: "Thank you! Your message has been sent. We will reply as soon as possible.", formError: "We could not send your message. Please try again or email ubezpieczenia@asperion.pl.", formRateLimit: "Too many enquiries have been sent. Please try again in a few minutes.", rights: "All rights reserved.", privacy: "Privacy policy", cookies: "Cookies",
-    themeToLight: "Switch to light theme", themeToDark: "Switch to dark theme", title: "Asperion — insurance tailored to you", description: "Asperion — insurance brokerage for individuals, families and businesses."
+    contactEyebrow: "CONTACT", contactTitle: "Write to us or give us a call", contactLead: "Tell us what you need. We will get back to you and suggest the next step.", companyType: "Insurance Brokerage", addressLabel: "Address", phoneLabel: "Phone", callNow: "Call now", formHeading: "Contact form", formName: "Full name", formEmail: "Email address", formPhone: "Phone number", formTopic: "What would you like to discuss?", formChoose: "Choose a topic", formMotor: "Motor insurance", formProperty: "Property insurance", formHealth: "Health insurance", formBusiness: "Business insurance", formOther: "Other", formMessage: "Message", formSensitive: "Do not include medical information or other sensitive data in this form.", formConsent: "I confirm that I have read the <a href=\"privacy.html\">privacy policy</a>.", formSubmit: "Send enquiry", formSending: "Sending…", formSuccess: "Thank you! Your message has been sent. We will reply as soon as possible.", formError: "We could not send your message. Please try again or email ubezpieczenia@asperion.pl.", formRateLimit: "Too many enquiries have been sent. Please try again in a few minutes.", rights: "All rights reserved.", privacy: "Privacy policy", cookies: "Cookies",
+    themeToLight: "Switch to light theme", themeToDark: "Switch to dark theme", title: "Insurance broker in Kraków for you and your business | Asperion", description: "Asperion is an insurance broker in Kraków. We compare motor, property, business and health insurance solutions."
   }
 };
 
 let currentLang = localStorage.getItem("asperion-lang") || "pl";
-let currentTheme = localStorage.getItem("asperion-theme") || "light";
+let currentTheme = localStorage.getItem("asperion-theme-v2") || "light";
 
 function updateThemeLabel() {
   const themeButton = document.querySelector(".theme-toggle");
@@ -41,8 +37,8 @@ function updateThemeLabel() {
 function setTheme(theme, persist = true) {
   currentTheme = theme;
   document.documentElement.dataset.theme = theme;
-  if (persist) localStorage.setItem("asperion-theme", theme);
-  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#3f3a34" : "#fffdf7";
+  if (persist) localStorage.setItem("asperion-theme-v2", theme);
+  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#493d35" : "#fbf8f3";
   updateThemeLabel();
 }
 
@@ -52,6 +48,10 @@ function setLanguage(lang, persist = true) {
   document.documentElement.lang = lang;
   document.title = translations[lang].title;
   document.querySelector('meta[name="description"]').content = translations[lang].description;
+  document.querySelector('meta[property="og:title"]')?.setAttribute("content", translations[lang].title);
+  document.querySelector('meta[property="og:description"]')?.setAttribute("content", translations[lang].description);
+  document.querySelector('meta[name="twitter:title"]')?.setAttribute("content", translations[lang].title);
+  document.querySelector('meta[name="twitter:description"]')?.setAttribute("content", translations[lang].description);
 
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const value = translations[lang][node.dataset.i18n];
@@ -100,10 +100,12 @@ document.querySelectorAll('.nav-links a').forEach((link) => link.addEventListene
   document.body.classList.remove("menu-open");
 }));
 
-const insurerMarquee = document.querySelector(".insurer-marquee");
-if (insurerMarquee) insurerMarquee.hidden = !FEATURES.insurerMarquee;
+function signalLead(type) {
+  window.dispatchEvent(new CustomEvent("asperion:lead", { detail: { type } }));
+}
 
 document.querySelector("[data-call-button]")?.addEventListener("click", (event) => {
+  signalLead("phone_click");
   const mobileUserAgent = navigator.userAgentData?.mobile;
   const isPhone = typeof mobileUserAgent === "boolean"
     ? mobileUserAgent
@@ -145,6 +147,7 @@ document.querySelector("#contact-form")?.addEventListener("submit", async (event
       body: JSON.stringify({
         name: data.get("name"),
         email: data.get("email"),
+        phone: data.get("phone"),
         topic: data.get("topic"),
         message: data.get("message"),
         website: data.get("website"),
@@ -159,6 +162,7 @@ document.querySelector("#contact-form")?.addEventListener("submit", async (event
     }
     status.textContent = translations[currentLang].formSuccess;
     form.reset();
+    signalLead("form_submit");
   } catch (error) {
     status.textContent = translations[currentLang][error.message] || translations[currentLang].formError;
   } finally {
