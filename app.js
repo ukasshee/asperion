@@ -1,6 +1,6 @@
 const translations = {
   pl: {
-    skip: "Przejdź do treści", navOffer: "Oferta", navProcess: "Jak działamy", navAbout: "O nas", navContact: "Kontakt", navCta: "Zapytaj o ofertę",
+    skip: "Przejdź do treści", navOffer: "Oferta", navProcess: "Jak działamy", navAbout: "O nas", navContact: "Kontakt", navCta: "Zapytaj o ofertę", aiImageLabel: "Grafika wygenerowana przez AI",
     heroEyebrow: "POŚREDNICTWO UBEZPIECZENIOWE", heroTitle: "Spokój zaczyna się <em>od dobrej decyzji.</em>", heroLead: "Jako pośrednictwo ubezpieczeniowe w Krakowie porównujemy rozwiązania, wyjaśniamy szczegóły i pomagamy wybrać ochronę dopasowaną do Ciebie lub Twojej firmy.", heroCta: "Porozmawiajmy", heroSecondary: "Poznaj ofertę", heroTrust: "Jasne zasady. Ludzki język. Odpowiedzialne doradztwo.", insurersLabel: "Wybrane towarzystwa ubezpieczeniowe",
     visualLabel: "Twoja ochrona", visualValue: "Dobrana świadomie", visualHome: "Dom i majątek", visualBusiness: "Firma i odpowiedzialność",
     offerEyebrow: "UBEZPIECZENIA", offerTitle: "Ubezpieczenia dopasowane do Twoich potrzeb.", offerLead: "Nie sprzedajemy gotowych odpowiedzi. Najpierw poznajemy potrzeby, później szukamy właściwego rozwiązania.",
@@ -11,7 +11,7 @@ const translations = {
     themeToLight: "Włącz jasny motyw", themeToDark: "Włącz ciemny motyw", title: "Ubezpieczenia Kraków dla Ciebie i firmy | Asperion", description: "Asperion to pośrednictwo ubezpieczeniowe w Krakowie. Porównujemy ubezpieczenia komunikacyjne, majątkowe, firmowe i zdrowotne."
   },
   en: {
-    skip: "Skip to content", navOffer: "Services", navProcess: "How it works", navAbout: "About us", navContact: "Contact", navCta: "Request a quote",
+    skip: "Skip to content", navOffer: "Services", navProcess: "How it works", navAbout: "About us", navContact: "Contact", navCta: "Request a quote", aiImageLabel: "AI-generated image",
     heroEyebrow: "INSURANCE BROKERAGE", heroTitle: "Peace of mind starts with <em>the right decision.</em>", heroLead: "As an insurance broker in Kraków, we compare solutions, explain the details and help you choose protection tailored to you or your business.", heroCta: "Let's talk", heroSecondary: "Explore our services", heroTrust: "Clear terms. Plain language. Responsible advice.", insurersLabel: "Selected insurance companies",
     visualLabel: "Your protection", visualValue: "Chosen with confidence", visualHome: "Home and property", visualBusiness: "Business and liability",
     offerEyebrow: "INSURANCE", offerTitle: "Insurance tailored to your needs.", offerLead: "We do not sell ready-made answers. First we understand your needs, then we look for the right solution.",
