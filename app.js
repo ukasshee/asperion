@@ -7,7 +7,7 @@ const translations = {
     offer1Title: "Komunikacyjne", offer1Text: "OC, AC, NNW i assistance — ochrona kierowcy, pasażerów oraz pojazdu.", offer1Alt: "Oliwkowy samochód zaparkowany przed domem", offer2Title: "Majątkowe", offer2Text: "Ochrona domu, mieszkania, wyposażenia i odpowiedzialności w życiu prywatnym.", offer2Alt: "Oświetlony dom otoczony zielenią o zmierzchu", offer3Title: "Firmowe", offer3Text: "Ochrona majątku, pracowników, odpowiedzialności i ciągłości działania firmy.", offer3Alt: "Właściciele firmy omawiający plany przy stole", offer4Title: "Zdrowotne", offer4Text: "Dostęp do prywatnej opieki medycznej, specjalistów, badań i leczenia.", offer4Alt: "Lekarka podczas spokojnej konsultacji z pacjentką", learnMore: "Dowiedz się więcej <span>→</span>",
     aboutEyebrow: "ASPERION", aboutTitle: "Ubezpieczenia są złożone. Nasza rola to uczynić je zrozumiałymi.", aboutText1: "Łączymy znajomość rynku z indywidualnym podejściem. Patrzymy szerzej niż na samą cenę — liczy się zakres ochrony, wyłączenia i realne wsparcie wtedy, gdy jest potrzebne.", aboutText2: "Budujemy relacje oparte na zaufaniu, przejrzystości i odpowiedzialności.",
     contactEyebrow: "KONTAKT", contactTitle: "Napisz do nas lub zadzwoń", contactLead: "Opowiedz nam, czego potrzebujesz. Wrócimy z odpowiedzią i zaproponujemy kolejny krok.", companyType: "Pośrednictwo Ubezpieczeniowe", addressLabel: "Adres", phoneLabel: "Telefon", callNow: "Zadzwoń teraz", formHeading: "Formularz kontaktowy", formName: "Imię i nazwisko", formEmail: "Adres e-mail", formPhone: "Numer telefonu", formTopic: "Czego dotyczy rozmowa?", formChoose: "Wybierz temat", formMotor: "Ubezpieczenia komunikacyjne", formProperty: "Ubezpieczenia majątkowe", formHealth: "Ubezpieczenia zdrowotne", formBusiness: "Ubezpieczenia firmowe", formOther: "Inny temat", formMessage: "Wiadomość", formSensitive: "Nie podawaj w formularzu danych medycznych ani innych danych wrażliwych.", formConsent: "Potwierdzam zapoznanie się z <a href=\"privacy.html\">polityką prywatności</a>.", formSubmit: "Wyślij zapytanie", formSending: "Wysyłanie…", formSuccess: "Dziękujemy! Wiadomość została wysłana. Odpowiemy najszybciej, jak to możliwe.", formError: "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na ubezpieczenia@asperion.pl.", formRateLimit: "Wysłano zbyt wiele zapytań. Spróbuj ponownie za kilka minut.", rights: "Wszelkie prawa zastrzeżone.", privacy: "Polityka prywatności", cookies: "Cookies",
-    themeToLight: "Włącz jasny motyw", themeToDark: "Włącz ciemny motyw", languageToEnglish: "Przełącz na język angielski", languageToPolish: "Switch to Polish", title: "Ubezpieczenia Kraków dla Ciebie i firmy | Asperion", description: "Asperion to pośrednictwo ubezpieczeniowe w Krakowie. Porównujemy ubezpieczenia komunikacyjne, majątkowe, firmowe i zdrowotne."
+    contrastOn: "Włącz tryb wysokiego kontrastu", contrastOff: "Wyłącz tryb wysokiego kontrastu", languageToEnglish: "Przełącz na język angielski", languageToPolish: "Switch to Polish", title: "Ubezpieczenia Kraków dla Ciebie i firmy | Asperion", description: "Asperion to pośrednictwo ubezpieczeniowe w Krakowie. Porównujemy ubezpieczenia komunikacyjne, majątkowe, firmowe i zdrowotne."
   },
   en: {
     skip: "Skip to content", navOffer: "Services", navAbout: "About us", navContact: "Contact", navCta: "Request a quote", aiImageLabel: "AI-generated image",
@@ -17,26 +17,29 @@ const translations = {
     offer1Title: "Motor", offer1Text: "Third-party liability, comprehensive cover, accident insurance and assistance for drivers, passengers and vehicles.", offer1Alt: "Olive-green car parked in front of a home", offer2Title: "Property", offer2Text: "Protection for your house, apartment, belongings and personal liability.", offer2Alt: "A warmly lit home surrounded by greenery at dusk", offer3Title: "Business", offer3Text: "Protection for company assets, employees, liability and business continuity.", offer3Alt: "Business owners discussing plans at a table", offer4Title: "Health", offer4Text: "Access to private medical care, specialists, diagnostic tests and treatment.", offer4Alt: "Doctor during a calm consultation with a patient", learnMore: "Learn more <span>→</span>",
     aboutEyebrow: "ASPERION", aboutTitle: "Insurance is complex. Our role is to make it clear.", aboutText1: "We combine market knowledge with a personal approach. We look beyond price — coverage, exclusions and genuine support when it matters are what count.", aboutText2: "We build relationships based on trust, transparency and responsibility.",
     contactEyebrow: "CONTACT", contactTitle: "Write to us or give us a call", contactLead: "Tell us what you need. We will get back to you and suggest the next step.", companyType: "Insurance Brokerage", addressLabel: "Address", phoneLabel: "Phone", callNow: "Call now", formHeading: "Contact form", formName: "Full name", formEmail: "Email address", formPhone: "Phone number", formTopic: "What would you like to discuss?", formChoose: "Choose a topic", formMotor: "Motor insurance", formProperty: "Property insurance", formHealth: "Health insurance", formBusiness: "Business insurance", formOther: "Other", formMessage: "Message", formSensitive: "Do not include medical information or other sensitive data in this form.", formConsent: "I confirm that I have read the <a href=\"privacy.html\">privacy policy</a>.", formSubmit: "Send enquiry", formSending: "Sending…", formSuccess: "Thank you! Your message has been sent. We will reply as soon as possible.", formError: "We could not send your message. Please try again or email ubezpieczenia@asperion.pl.", formRateLimit: "Too many enquiries have been sent. Please try again in a few minutes.", rights: "All rights reserved.", privacy: "Privacy policy", cookies: "Cookies",
-    themeToLight: "Switch to light theme", themeToDark: "Switch to dark theme", languageToEnglish: "Przełącz na język angielski", languageToPolish: "Switch to Polish", title: "Insurance broker in Kraków for you and your business | Asperion", description: "Asperion is an insurance broker in Kraków. We compare motor, property, business and health insurance solutions."
+    contrastOn: "Enable high contrast mode", contrastOff: "Disable high contrast mode", languageToEnglish: "Przełącz na język angielski", languageToPolish: "Switch to Polish", title: "Insurance broker in Kraków for you and your business | Asperion", description: "Asperion is an insurance broker in Kraków. We compare motor, property, business and health insurance solutions."
   }
 };
 
 let currentLang = localStorage.getItem("asperion-lang") || "pl";
-let currentTheme = localStorage.getItem("asperion-theme-v2") || "light";
+const storedTheme = localStorage.getItem("asperion-theme-v2");
+let currentTheme = storedTheme === "dark" || storedTheme === "contrast" ? "contrast" : "light";
 
 function updateThemeLabel() {
   const themeButton = document.querySelector(".theme-toggle");
   if (!themeButton) return;
-  const label = currentTheme === "dark" ? translations[currentLang].themeToLight : translations[currentLang].themeToDark;
+  const isContrast = currentTheme === "contrast";
+  const label = isContrast ? translations[currentLang].contrastOff : translations[currentLang].contrastOn;
   themeButton.setAttribute("aria-label", label);
   themeButton.setAttribute("title", label);
+  themeButton.setAttribute("aria-pressed", String(isContrast));
 }
 
 function setTheme(theme, persist = true) {
   currentTheme = theme;
   document.documentElement.dataset.theme = theme;
   if (persist) localStorage.setItem("asperion-theme-v2", theme);
-  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#493d35" : "#fbf8f3";
+  document.querySelector('meta[name="theme-color"]').content = theme === "contrast" ? "#000000" : "#fbf8f3";
   updateThemeLabel();
 }
 
@@ -82,7 +85,7 @@ document.querySelector("[data-language-toggle]")?.addEventListener("click", () =
 });
 
 document.querySelector(".theme-toggle")?.addEventListener("click", () => {
-  setTheme(currentTheme === "dark" ? "light" : "dark");
+  setTheme(currentTheme === "contrast" ? "light" : "contrast");
 });
 
 const toggle = document.querySelector(".menu-toggle");

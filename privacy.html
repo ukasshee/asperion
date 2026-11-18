@@ -9,9 +9,10 @@
   <link rel="canonical" href="https://www.asperion.pl/privacy" />
   <title>Polityka prywatności — Asperion</title>
   <script>
-    document.documentElement.dataset.theme = localStorage.getItem("asperion-theme-v2") || "light";
+    const savedTheme = localStorage.getItem("asperion-theme-v2");
+    document.documentElement.dataset.theme = savedTheme === "dark" || savedTheme === "contrast" ? "contrast" : "light";
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261118-3" />
+  <link rel="stylesheet" href="styles.css?v=20261118-4" />
 </head>
 <body class="policy-page">
   <a class="skip-link" href="#policy-main">Przejdź do treści</a>
@@ -24,9 +25,8 @@
       </a>
       <a class="policy-back" href="index.html">← <span data-policy-ui="back">Wróć do strony</span></a>
       <div class="nav-actions">
-        <button class="theme-toggle" type="button" aria-label="Włącz jasny motyw" title="Włącz jasny motyw">
-          <span class="theme-icon theme-sun" aria-hidden="true">☼</span>
-          <span class="theme-icon theme-moon" aria-hidden="true">◐</span>
+        <button class="theme-toggle" type="button" aria-label="Włącz tryb wysokiego kontrastu" title="Włącz tryb wysokiego kontrastu" aria-pressed="false">
+          <svg class="accessibility-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2.1"/><path d="M5 8.5h14M12 7v6.5M12 13.5 7.8 21M12 13.5l4.2 7.5"/></svg>
         </button>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Przełącz na język angielski" title="Przełącz na język angielski"><img class="language-flag" src="flag-gb.svg" alt="" width="20" height="14" aria-hidden="true" /></button>
       </div>
@@ -140,7 +140,7 @@
             <thead><tr><th>Nazwa</th><th>Cel</th><th>Okres</th></tr></thead>
             <tbody>
               <tr><td><code>asperion-lang</code></td><td>Zapamiętanie wybranego języka</td><td>Do usunięcia danych strony w przeglądarce</td></tr>
-              <tr><td><code>asperion-theme-v2</code></td><td>Zapamiętanie jasnego lub ciemnego motywu</td><td>Do usunięcia danych strony w przeglądarce</td></tr>
+              <tr><td><code>asperion-theme-v2</code></td><td>Zapamiętanie trybu jasnego lub wysokiego kontrastu</td><td>Do usunięcia danych strony w przeglądarce</td></tr>
               <tr><td><code>asperion-cookie-notice</code></td><td>Zapamiętanie potwierdzenia komunikatu o prywatności</td><td>Do usunięcia danych strony w przeglądarce lub zmiany wersji komunikatu</td></tr>
             </tbody>
           </table>
@@ -232,7 +232,7 @@
         <p><strong>Your full name, email address, telephone number and message are not stored in cookies or local storage.</strong> After submission, the data is transmitted through the server to the Controller’s configured email inbox. It is not used to track your browser activity.</p>
         <div class="policy-table-wrap"><table><thead><tr><th>Name</th><th>Purpose</th><th>Retention</th></tr></thead><tbody>
           <tr><td><code>asperion-lang</code></td><td>Remember the selected language</td><td>Until website data is deleted in the browser</td></tr>
-          <tr><td><code>asperion-theme-v2</code></td><td>Remember the light or dark theme</td><td>Until website data is deleted in the browser</td></tr>
+          <tr><td><code>asperion-theme-v2</code></td><td>Remember light or high contrast mode</td><td>Until website data is deleted in the browser</td></tr>
           <tr><td><code>asperion-cookie-notice</code></td><td>Remember acknowledgement of the privacy notice</td><td>Until website data is deleted or the notice version changes</td></tr>
         </tbody></table></div>
         <p>You can remove this information in your browser settings. If analytics or marketing tools are added in the future, they will not be activated before obtaining any required consent and this policy will be updated.</p>
@@ -279,7 +279,7 @@
     <button class="button cookie-confirm" type="button" data-cookie-confirm data-cookie-i18n="confirm">Rozumiem</button>
   </section>
 
-  <script src="privacy.js?v=20261118-1"></script>
+  <script src="privacy.js?v=20261118-2"></script>
   <script src="consent.js?v=20260727-2"></script>
 </body>
 </html>

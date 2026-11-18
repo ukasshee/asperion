@@ -19,6 +19,7 @@
 html { scroll-behavior: smooth; }
 html { color-scheme: dark; }
 html[data-theme="light"] { color-scheme: light; }
+html[data-theme="contrast"] { color-scheme: dark; }
 body { margin: 0; background: var(--brown); color: var(--white); font-family: "Segoe UI Variable Text", "Segoe UI", Arial, sans-serif; line-height: 1.55; }
 body.menu-open { overflow: hidden; }
 a { color: inherit; text-decoration: none; }
@@ -41,13 +42,9 @@ button { color: inherit; }
 .nav-actions { display: flex; align-items: center; gap: 18px; }
 .theme-toggle, .language-toggle { position: relative; width: 36px; height: 36px; flex: 0 0 auto; border: 1px solid rgba(255,255,255,.18); border-radius: 11px; background: rgba(255,255,255,.06); color: var(--olive-light); cursor: pointer; overflow: hidden; transition: border-color .2s ease, background .2s ease; }
 .theme-toggle:hover, .language-toggle:hover { border-color: var(--olive); background: rgba(156,166,106,.12); }
-.language-toggle { display: grid; place-items: center; padding: 0; line-height: 1; }
+.theme-toggle, .language-toggle { display: grid; place-items: center; padding: 0; line-height: 1; }
 .language-flag { display: block; width: 20px; height: 14px; border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
-.theme-icon { position: absolute; inset: 0; display: grid; place-items: center; font-size: 18px; transition: opacity .25s ease, transform .25s ease; }
-.theme-sun { opacity: 1; transform: rotate(0) scale(1); }
-.theme-moon { opacity: 0; transform: rotate(-45deg) scale(.6); }
-html[data-theme="light"] .theme-sun { opacity: 0; transform: rotate(45deg) scale(.6); }
-html[data-theme="light"] .theme-moon { opacity: 1; transform: rotate(0) scale(1); }
+.accessibility-icon { width: 21px; height: 21px; fill: currentColor; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .menu-toggle { display: none; }
 
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 54px; padding: 0 25px; border: 1px solid var(--olive); border-radius: 16px; background: var(--olive); color: var(--brown); font-weight: 700; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease; }
@@ -540,4 +537,154 @@ html[data-theme="light"] .policy-date { color: #76614f; }
   html[data-theme="light"] .offer-card { min-height: 470px; }
   html[data-theme="light"] .contact { padding-top: 28px; }
   html[data-theme="light"] .contact-shell { padding: 38px 22px; border-radius: 15px; }
+}
+
+/* Tryb wysokiego kontrastu — czytelność, mocny fokus i ograniczenie rozpraszaczy. */
+html[data-theme="contrast"] {
+  --brown: #000;
+  --brown-soft: #000;
+  --white: #fff;
+  --olive: #ffe500;
+  --olive-light: #ffe500;
+  --brown-line: #fff;
+  --line: #fff;
+}
+html[data-theme="contrast"] body,
+html[data-theme="contrast"] .hero,
+html[data-theme="contrast"] .offer,
+html[data-theme="contrast"] .about,
+html[data-theme="contrast"] .contact,
+html[data-theme="contrast"] footer,
+html[data-theme="contrast"] .policy-page { background: #000; color: #fff; }
+html[data-theme="contrast"] :focus-visible { outline: 3px solid #ffe500; outline-offset: 4px; }
+html[data-theme="contrast"] .skip-link { border: 2px solid #000; background: #ffe500; color: #000; font-weight: 800; }
+html[data-theme="contrast"] .nav-island,
+html[data-theme="contrast"] .nav-links {
+  border: 2px solid #fff;
+  background: #000;
+  color: #fff;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+html[data-theme="contrast"] .brand-logo { filter: grayscale(1) brightness(0) invert(1); }
+html[data-theme="contrast"] .nav-links a { opacity: 1; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+html[data-theme="contrast"] .theme-toggle,
+html[data-theme="contrast"] .language-toggle,
+html[data-theme="contrast"] .menu-toggle { border: 2px solid #fff; background: #000; color: #fff; }
+html[data-theme="contrast"] .theme-toggle[aria-pressed="true"] { border-color: #ffe500; background: #ffe500; color: #000; }
+html[data-theme="contrast"] .theme-toggle:hover,
+html[data-theme="contrast"] .language-toggle:hover,
+html[data-theme="contrast"] .menu-toggle:hover { border-color: #ffe500; background: #ffe500; color: #000; }
+html[data-theme="contrast"] .button,
+html[data-theme="contrast"] .call-button,
+html[data-theme="contrast"] .contact-form .button,
+html[data-theme="contrast"] .cookie-confirm {
+  border: 2px solid #ffe500;
+  background: #ffe500;
+  color: #000;
+  box-shadow: none;
+  font-weight: 800;
+}
+html[data-theme="contrast"] .button:hover,
+html[data-theme="contrast"] .call-button:hover,
+html[data-theme="contrast"] .contact-form .button:hover,
+html[data-theme="contrast"] .cookie-confirm:hover { border-color: #fff; background: #fff; color: #000; transform: none; box-shadow: none; }
+html[data-theme="contrast"] .hero::before { display: none; }
+html[data-theme="contrast"] .hero::after { background: rgba(0,0,0,.82); }
+html[data-theme="contrast"] .hero-image { filter: grayscale(1) contrast(1.35); opacity: .28; }
+html[data-theme="contrast"] .hero-insurers { background: #000; border-block: 1px solid #fff; }
+html[data-theme="contrast"] .insurer-logo img { filter: grayscale(1) brightness(0) invert(1); opacity: 1; }
+html[data-theme="contrast"] .insurer-track { animation-play-state: paused; }
+html[data-theme="contrast"] .eyebrow,
+html[data-theme="contrast"] .form-heading,
+html[data-theme="contrast"] .company-data strong,
+html[data-theme="contrast"] .policy-date,
+html[data-theme="contrast"] .policy-document > section h2,
+html[data-theme="contrast"] .policy-document th,
+html[data-theme="contrast"] .policy-document code { color: #ffe500; }
+html[data-theme="contrast"] .hero-lead,
+html[data-theme="contrast"] .trust-line,
+html[data-theme="contrast"] .section-heading > p,
+html[data-theme="contrast"] .offer-card p,
+html[data-theme="contrast"] .about-copy,
+html[data-theme="contrast"] .about-company dt,
+html[data-theme="contrast"] .about-company dd,
+html[data-theme="contrast"] .about-company .company-data span,
+html[data-theme="contrast"] .contact-copy > p:not(.eyebrow),
+html[data-theme="contrast"] .contact-details dt,
+html[data-theme="contrast"] .contact-details dd,
+html[data-theme="contrast"] .contact-form label,
+html[data-theme="contrast"] .form-privacy-note,
+html[data-theme="contrast"] .call-number,
+html[data-theme="contrast"] .call-number strong,
+html[data-theme="contrast"] .cookie-copy > p:not(.eyebrow),
+html[data-theme="contrast"] .policy-lead,
+html[data-theme="contrast"] .policy-document > section p,
+html[data-theme="contrast"] .policy-document > section li,
+html[data-theme="contrast"] .policy-document td { color: #fff; opacity: 1; }
+html[data-theme="contrast"] .offer-card,
+html[data-theme="contrast"] .about-company,
+html[data-theme="contrast"] .contact-shell,
+html[data-theme="contrast"] .call-number,
+html[data-theme="contrast"] .policy-table-wrap {
+  border: 2px solid #fff;
+  background: #000;
+  color: #fff;
+  box-shadow: none;
+}
+html[data-theme="contrast"] .offer-card:hover { border-color: #ffe500; background: #000; color: #fff; transform: none; box-shadow: none; }
+html[data-theme="contrast"] .offer-photo { border-bottom: 2px solid #fff; background: #000; }
+html[data-theme="contrast"] .offer-photo img { filter: grayscale(1) contrast(1.2); }
+html[data-theme="contrast"] .offer-photo::after { background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.8)); }
+html[data-theme="contrast"] .offer-icon,
+html[data-theme="contrast"] .offer-card:hover .offer-icon { border: 2px solid #ffe500; background: #000; color: #ffe500; box-shadow: none; transform: none; }
+html[data-theme="contrast"] .offer-card a,
+html[data-theme="contrast"] .about-company dd a,
+html[data-theme="contrast"] .contact-details dd a,
+html[data-theme="contrast"] .consent a,
+html[data-theme="contrast"] .cookie-copy a,
+html[data-theme="contrast"] .policy-document a,
+html[data-theme="contrast"] .footer-links a,
+html[data-theme="contrast"] .footer-link-button,
+html[data-theme="contrast"] .powered-badge { color: #ffe500; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; opacity: 1; }
+html[data-theme="contrast"] .contact-shell { border-color: #ffe500; }
+html[data-theme="contrast"] .contact-form input,
+html[data-theme="contrast"] .contact-form select,
+html[data-theme="contrast"] .contact-form textarea {
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+}
+html[data-theme="contrast"] .contact-form input:focus,
+html[data-theme="contrast"] .contact-form select:focus,
+html[data-theme="contrast"] .contact-form textarea:focus { border-color: #ffe500; box-shadow: 0 0 0 2px #ffe500; }
+html[data-theme="contrast"] .contact-form select option { background: #000; color: #fff; }
+html[data-theme="contrast"] .consent input { accent-color: #ffe500; }
+html[data-theme="contrast"] footer { border-top: 2px solid #fff; }
+html[data-theme="contrast"] footer p,
+html[data-theme="contrast"] .footer-links,
+html[data-theme="contrast"] .powered-badge { opacity: 1; }
+html[data-theme="contrast"] .cookie-panel {
+  border: 3px solid #ffe500;
+  background: #000;
+  color: #fff;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+html[data-theme="contrast"] .policy-hero,
+html[data-theme="contrast"] .policy-document > section,
+html[data-theme="contrast"] .policy-document th,
+html[data-theme="contrast"] .policy-document td { border-color: #fff; }
+html[data-theme="contrast"] .policy-cookie-button { border: 2px solid #ffe500; color: #ffe500; font-weight: 700; }
+html[data-theme="contrast"] .ai-mark { border: 2px solid #fff; background: #000; color: #fff; }
+html[data-theme="contrast"] .scroll-hint { border: 2px solid #fff; }
+html[data-theme="contrast"] .scroll-hint span { background: #ffe500; }
+html[data-theme="contrast"] .reveal { transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

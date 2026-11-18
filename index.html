@@ -68,9 +68,10 @@
     }
   </script>
   <script>
-    document.documentElement.dataset.theme = localStorage.getItem("asperion-theme-v2") || "light";
+    const savedTheme = localStorage.getItem("asperion-theme-v2");
+    document.documentElement.dataset.theme = savedTheme === "dark" || savedTheme === "contrast" ? "contrast" : "light";
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261118-3" />
+  <link rel="stylesheet" href="styles.css?v=20261118-4" />
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Przejdź do treści</a>
@@ -94,9 +95,8 @@
         </div>
 
         <div class="nav-actions">
-          <button class="theme-toggle" type="button" aria-label="Włącz jasny motyw" title="Włącz jasny motyw">
-            <span class="theme-icon theme-sun" aria-hidden="true">☼</span>
-            <span class="theme-icon theme-moon" aria-hidden="true">◐</span>
+          <button class="theme-toggle" type="button" aria-label="Włącz tryb wysokiego kontrastu" title="Włącz tryb wysokiego kontrastu" aria-pressed="false">
+            <svg class="accessibility-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.5" r="2.1"/><path d="M5 8.5h14M12 7v6.5M12 13.5 7.8 21M12 13.5l4.2 7.5"/></svg>
           </button>
           <button class="language-toggle" type="button" data-language-toggle aria-label="Przełącz na język angielski" title="Przełącz na język angielski"><img class="language-flag" src="flag-gb.svg" alt="" width="20" height="14" aria-hidden="true" /></button>
           <a class="button button-small" href="#kontakt" data-i18n="navCta">Zapytaj o ofertę</a>
@@ -309,7 +309,7 @@
     <button class="button cookie-confirm" type="button" data-cookie-confirm data-cookie-i18n="confirm">Rozumiem</button>
   </section>
 
-  <script src="app.js?v=20261118-2"></script>
+  <script src="app.js?v=20261118-3"></script>
   <script src="consent.js?v=20260727-2"></script>
 </body>
 </html>
