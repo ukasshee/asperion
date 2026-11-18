@@ -107,17 +107,6 @@ h1 em { display: block; margin-top: .06em; font-family: Georgia, serif; font-siz
 .offer-card p { margin: 0 0 30px; opacity: .62; }
 .offer-card a { display: flex; justify-content: space-between; margin-top: auto; padding-top: 18px; border-top: 1px solid currentColor; font-size: 13px; font-weight: 700; }
 
-.process { background: var(--brown); color: var(--white); }
-.process-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 130px; }
-.process-copy { position: sticky; top: 140px; align-self: start; }
-.process-copy p:not(.eyebrow) { max-width: 420px; margin: 27px 0 35px; color: rgba(255,255,255,.6); }
-.steps { list-style: none; margin: 0; padding: 0; }
-.steps li { display: grid; grid-template-columns: 65px 1fr; gap: 20px; padding: 34px 0; border-top: 1px solid var(--line); }
-.steps li:last-child { border-bottom: 1px solid var(--line); }
-.steps li > span { opacity: .45; font-size: 12px; }
-.steps h3 { margin: 0 0 10px; font-size: 25px; }
-.steps p { margin: 0; color: rgba(255,255,255,.58); }
-
 .about-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 100px; }
 .about { background: var(--brown); }
 .about-copy { padding-top: 55px; color: rgba(255,253,247,.67); font-size: 18px; }
@@ -193,7 +182,6 @@ footer p, .footer-links { font-size: 12px; opacity: .58; }
 .powered-brand-icon { display: grid; place-items: center; width: 21px; height: 21px; color: currentColor; }
 .powered-brand-icon svg { display: block; width: 19px; height: 19px; overflow: visible; }
 .powered-badge strong { color: inherit; font-size: 11px; font-weight: 650; letter-spacing: -.015em; }
-.powered-dot { color: var(--olive-light); }
 .powered-separator { opacity: .35; }
 .powered-tagline { opacity: .68; }
 
@@ -224,11 +212,6 @@ html[data-theme="light"] .section-heading > p { color: rgba(63,58,52,.64); }
 html[data-theme="light"] .offer-icon { color: var(--olive); background: rgba(156,166,106,.12); }
 html[data-theme="light"] .offer-card:hover .offer-icon { color: var(--brown); background: var(--olive); }
 html[data-theme="light"] .offer-card:hover { background: var(--brown); color: var(--white); }
-html[data-theme="light"] .process { background: var(--white); color: var(--brown); }
-html[data-theme="light"] .process-copy p:not(.eyebrow),
-html[data-theme="light"] .steps p { color: rgba(63,58,52,.64); }
-html[data-theme="light"] .steps li { border-color: rgba(63,58,52,.18); }
-html[data-theme="light"] .steps li:last-child { border-bottom-color: rgba(63,58,52,.18); }
 html[data-theme="light"] .about { background: var(--white); }
 html[data-theme="light"] .about-copy { color: rgba(63,58,52,.69); }
 html[data-theme="light"] .about-company { background: rgba(156,166,106,.1); border-color: rgba(63,58,52,.16); }
@@ -263,10 +246,9 @@ html[data-theme="light"] .cookie-copy a { color: #626a3f; }
   .hero-image { background-position: 66% center; }
   .hero::after { background: linear-gradient(90deg, rgba(63,58,52,.97) 0%, rgba(63,58,52,.88) 55%, rgba(63,58,52,.38) 100%); }
   html[data-theme="light"] .hero::after { background: linear-gradient(90deg, rgba(255,253,247,.98) 0%, rgba(255,253,247,.9) 55%, rgba(255,253,247,.42) 100%); }
-  .section-heading, .process-grid, .about-grid, .contact-shell { grid-template-columns: 1fr; gap: 55px; }
+  .section-heading, .about-grid, .contact-shell { grid-template-columns: 1fr; gap: 55px; }
   .offer-grid { grid-template-columns: 1fr 1fr; }
   .offer-card { grid-column: auto; }
-  .process-copy { position: static; }
 }
 
 @media (max-width: 680px) {
@@ -300,7 +282,6 @@ html[data-theme="light"] .cookie-copy a { color: #626a3f; }
   .section-heading { gap: 25px; margin-bottom: 38px; }
   .offer-grid { grid-template-columns: 1fr; }
   .offer-card { grid-column: auto; min-height: 500px; }
-  .process-grid { gap: 45px; }
   .about-copy { padding-top: 0; }
   .contact { padding-top: 15px; }
   .contact-shell { width: calc(100% - 20px); padding: 42px 24px; border-radius: 27px; gap: 45px; }
@@ -459,15 +440,6 @@ html[data-theme="light"] .offer-card:hover .offer-icon { background: var(--cashm
 html[data-theme="light"] .offer-card:hover .offer-photo img { transform: scale(1.02); filter: none; }
 html[data-theme="light"] .offer-card p { color: rgba(73,61,53,.68); opacity: 1; }
 html[data-theme="light"] .offer-card a { border-color: rgba(73,61,53,.14); }
-html[data-theme="light"] .process {
-  border-top: 1px solid rgba(73,61,53,.08);
-  background: #fff;
-  color: var(--brown);
-}
-html[data-theme="light"] .process-copy p:not(.eyebrow),
-html[data-theme="light"] .steps p { color: rgba(73,61,53,.66); }
-html[data-theme="light"] .steps li,
-html[data-theme="light"] .steps li:last-child { border-color: rgba(73,61,53,.14); }
 html[data-theme="light"] .about { background: #f5efe8; }
 html[data-theme="light"] .about-copy { color: rgba(73,61,53,.74); }
 html[data-theme="light"] .about-company {
