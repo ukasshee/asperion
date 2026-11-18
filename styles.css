@@ -228,7 +228,10 @@ html[data-theme="light"] .cookie-copy a { color: #626a3f; }
 .reveal.visible { opacity: 1; transform: none; }
 
 @media (max-width: 960px) {
-  .menu-toggle { order: 3; display: flex; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(255,255,255,.2); border-radius: 13px; background: transparent; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; }
+  .nav-main { justify-content: flex-start; }
+  .nav-actions { margin-left: auto; gap: 7px; }
+  .nav-actions .button-small { display: none; }
+  .menu-toggle { order: 3; display: flex; width: 44px; height: 44px; margin-left: 2px; padding: 0; border: 1px solid rgba(255,255,255,.2); border-radius: 13px; background: transparent; flex-direction: column; align-items: center; justify-content: center; gap: 6px; cursor: pointer; }
   .menu-toggle span { width: 17px; height: 1px; background: currentColor; transition: transform .2s ease; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3.5px) rotate(45deg); }
   .menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
