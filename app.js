@@ -8,7 +8,7 @@ const translations = {
     processEyebrow: "JAK DZIAŁAMY", processTitle: "Prościej, niż myślisz.", processLead: "Bierzemy na siebie porównanie wariantów i formalności. Ty podejmujesz świadomą decyzję.", processCta: "Zacznij od rozmowy", step1Title: "Rozmowa", step1Text: "Poznajemy Twoją sytuację, cele i najważniejsze ryzyka.", step2Title: "Analiza", step2Text: "Porównujemy dostępne rozwiązania i wskazujemy różnice.", step3Title: "Decyzja", step3Text: "Wyjaśniamy warunki i pomagamy bezpiecznie przejść przez formalności.",
     aboutEyebrow: "ASPERION", aboutTitle: "Ubezpieczenia są złożone. Nasza rola to uczynić je zrozumiałymi.", aboutText1: "Łączymy znajomość rynku z indywidualnym podejściem. Patrzymy szerzej niż na samą cenę — liczy się zakres ochrony, wyłączenia i realne wsparcie wtedy, gdy jest potrzebne.", aboutText2: "Budujemy relacje oparte na zaufaniu, przejrzystości i odpowiedzialności.",
     contactEyebrow: "KONTAKT", contactTitle: "Napisz do nas lub zadzwoń", contactLead: "Opowiedz nam, czego potrzebujesz. Wrócimy z odpowiedzią i zaproponujemy kolejny krok.", companyType: "Pośrednictwo Ubezpieczeniowe", addressLabel: "Adres", phoneLabel: "Telefon", callNow: "Zadzwoń teraz", formHeading: "Formularz kontaktowy", formName: "Imię i nazwisko", formEmail: "Adres e-mail", formPhone: "Numer telefonu", formTopic: "Czego dotyczy rozmowa?", formChoose: "Wybierz temat", formMotor: "Ubezpieczenia komunikacyjne", formProperty: "Ubezpieczenia majątkowe", formHealth: "Ubezpieczenia zdrowotne", formBusiness: "Ubezpieczenia firmowe", formOther: "Inny temat", formMessage: "Wiadomość", formSensitive: "Nie podawaj w formularzu danych medycznych ani innych danych wrażliwych.", formConsent: "Potwierdzam zapoznanie się z <a href=\"privacy.html\">polityką prywatności</a>.", formSubmit: "Wyślij zapytanie", formSending: "Wysyłanie…", formSuccess: "Dziękujemy! Wiadomość została wysłana. Odpowiemy najszybciej, jak to możliwe.", formError: "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na ubezpieczenia@asperion.pl.", formRateLimit: "Wysłano zbyt wiele zapytań. Spróbuj ponownie za kilka minut.", rights: "Wszelkie prawa zastrzeżone.", privacy: "Polityka prywatności", cookies: "Cookies",
-    themeToLight: "Włącz jasny motyw", themeToDark: "Włącz ciemny motyw", title: "Ubezpieczenia Kraków dla Ciebie i firmy | Asperion", description: "Asperion to pośrednictwo ubezpieczeniowe w Krakowie. Porównujemy ubezpieczenia komunikacyjne, majątkowe, firmowe i zdrowotne."
+    themeToLight: "Włącz jasny motyw", themeToDark: "Włącz ciemny motyw", languageToEnglish: "Przełącz na język angielski", languageToPolish: "Switch to Polish", title: "Ubezpieczenia Kraków dla Ciebie i firmy | Asperion", description: "Asperion to pośrednictwo ubezpieczeniowe w Krakowie. Porównujemy ubezpieczenia komunikacyjne, majątkowe, firmowe i zdrowotne."
   },
   en: {
     skip: "Skip to content", navOffer: "Services", navProcess: "How it works", navAbout: "About us", navContact: "Contact", navCta: "Request a quote", aiImageLabel: "AI-generated image",
@@ -19,7 +19,7 @@ const translations = {
     processEyebrow: "HOW IT WORKS", processTitle: "Simpler than you think.", processLead: "We take care of comparing options and paperwork. You make an informed decision.", processCta: "Start with a conversation", step1Title: "Conversation", step1Text: "We learn about your situation, goals and key risks.", step2Title: "Analysis", step2Text: "We compare available solutions and highlight the differences.", step3Title: "Decision", step3Text: "We explain the terms and guide you safely through the formalities.",
     aboutEyebrow: "ASPERION", aboutTitle: "Insurance is complex. Our role is to make it clear.", aboutText1: "We combine market knowledge with a personal approach. We look beyond price — coverage, exclusions and genuine support when it matters are what count.", aboutText2: "We build relationships based on trust, transparency and responsibility.",
     contactEyebrow: "CONTACT", contactTitle: "Write to us or give us a call", contactLead: "Tell us what you need. We will get back to you and suggest the next step.", companyType: "Insurance Brokerage", addressLabel: "Address", phoneLabel: "Phone", callNow: "Call now", formHeading: "Contact form", formName: "Full name", formEmail: "Email address", formPhone: "Phone number", formTopic: "What would you like to discuss?", formChoose: "Choose a topic", formMotor: "Motor insurance", formProperty: "Property insurance", formHealth: "Health insurance", formBusiness: "Business insurance", formOther: "Other", formMessage: "Message", formSensitive: "Do not include medical information or other sensitive data in this form.", formConsent: "I confirm that I have read the <a href=\"privacy.html\">privacy policy</a>.", formSubmit: "Send enquiry", formSending: "Sending…", formSuccess: "Thank you! Your message has been sent. We will reply as soon as possible.", formError: "We could not send your message. Please try again or email ubezpieczenia@asperion.pl.", formRateLimit: "Too many enquiries have been sent. Please try again in a few minutes.", rights: "All rights reserved.", privacy: "Privacy policy", cookies: "Cookies",
-    themeToLight: "Switch to light theme", themeToDark: "Switch to dark theme", title: "Insurance broker in Kraków for you and your business | Asperion", description: "Asperion is an insurance broker in Kraków. We compare motor, property, business and health insurance solutions."
+    themeToLight: "Switch to light theme", themeToDark: "Switch to dark theme", languageToEnglish: "Przełącz na język angielski", languageToPolish: "Switch to Polish", title: "Insurance broker in Kraków for you and your business | Asperion", description: "Asperion is an insurance broker in Kraków. We compare motor, property, business and health insurance solutions."
   }
 };
 
@@ -68,17 +68,19 @@ function setLanguage(lang, persist = true) {
     if (value) node.setAttribute("aria-label", value);
   });
 
-  document.querySelectorAll(".lang").forEach((button) => {
-    const active = button.dataset.lang === lang;
-    button.classList.toggle("active", active);
-    button.setAttribute("aria-pressed", active);
-  });
+  const languageButton = document.querySelector("[data-language-toggle]");
+  if (languageButton) {
+    const label = lang === "pl" ? translations.pl.languageToEnglish : translations.en.languageToPolish;
+    languageButton.querySelector("img").src = lang === "pl" ? "flag-gb.svg" : "flag-pl.svg";
+    languageButton.setAttribute("aria-label", label);
+    languageButton.setAttribute("title", label);
+  }
   updateThemeLabel();
   document.dispatchEvent(new CustomEvent("asperion:language", { detail: { lang } }));
 }
 
-document.querySelectorAll(".lang").forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
+document.querySelector("[data-language-toggle]")?.addEventListener("click", () => {
+  setLanguage(currentLang === "pl" ? "en" : "pl");
 });
 
 document.querySelector(".theme-toggle")?.addEventListener("click", () => {

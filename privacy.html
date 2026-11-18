@@ -11,7 +11,7 @@
   <script>
     document.documentElement.dataset.theme = localStorage.getItem("asperion-theme-v2") || "light";
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261117-6" />
+  <link rel="stylesheet" href="styles.css?v=20261118-1" />
 </head>
 <body class="policy-page">
   <a class="skip-link" href="#policy-main">Przejdź do treści</a>
@@ -28,11 +28,7 @@
           <span class="theme-icon theme-sun" aria-hidden="true">☼</span>
           <span class="theme-icon theme-moon" aria-hidden="true">◐</span>
         </button>
-        <div class="language-switch" aria-label="Wybór języka">
-          <button type="button" class="lang active" data-lang="pl" aria-pressed="true">PL</button>
-          <span aria-hidden="true">/</span>
-          <button type="button" class="lang" data-lang="en" aria-pressed="false">EN</button>
-        </div>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Przełącz na język angielski" title="Przełącz na język angielski"><img class="language-flag" src="flag-gb.svg" alt="" width="20" height="14" aria-hidden="true" /></button>
       </div>
     </nav>
   </header>
@@ -283,7 +279,7 @@
     <button class="button cookie-confirm" type="button" data-cookie-confirm data-cookie-i18n="confirm">Rozumiem</button>
   </section>
 
-  <script src="privacy.js?v=20261117"></script>
+  <script src="privacy.js?v=20261118-1"></script>
   <script src="consent.js?v=20260727-2"></script>
 </body>
 </html>
