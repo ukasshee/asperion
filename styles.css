@@ -56,7 +56,7 @@ button { color: inherit; }
 .hero::before { content: ""; position: absolute; z-index: 2; inset: 0; opacity: .05; background-image: radial-gradient(circle at center, var(--white) 0 1px, transparent 1.5px); background-size: 26px 26px; mask-image: linear-gradient(to right, black, transparent 64%); pointer-events: none; }
 .hero::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(63,58,52,.98) 0%, rgba(63,58,52,.93) 32%, rgba(63,58,52,.58) 57%, rgba(63,58,52,.12) 100%); pointer-events: none; }
 .hero-image { position: absolute; z-index: 0; inset: 0; background: url("hero-family-home-car.jpg") 58% center / cover no-repeat; transform: scale(1.01); }
-.ai-mark { position: absolute; z-index: 4; right: 14px; bottom: 14px; display: inline-flex; align-items: center; justify-content: center; min-width: 27px; min-height: 20px; padding: 3px 7px; border: 1px solid rgba(255,255,255,.34); border-radius: 999px; background: rgba(64,53,46,.48); color: rgba(255,255,255,.86); font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .13em; text-indent: .13em; box-shadow: 0 4px 14px rgba(0,0,0,.12); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); pointer-events: none; }
+.ai-mark { position: absolute; z-index: 4; right: 14px; bottom: 14px; display: inline-flex; align-items: center; justify-content: center; min-width: 24px; min-height: 18px; padding: 3px 6px; border: 0; border-radius: 999px; background: rgba(255,255,255,.13); color: rgba(255,255,255,.76); font-size: 8px; font-weight: 700; line-height: 1; letter-spacing: .12em; text-indent: .12em; box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 3px 12px rgba(0,0,0,.08); backdrop-filter: blur(12px) saturate(1.15); -webkit-backdrop-filter: blur(12px) saturate(1.15); pointer-events: none; }
 .hero-ai-mark { right: 24px; bottom: 22px; z-index: 4; }
 .hero-insurers { position: relative; z-index: 3; width: min(760px, 72vw); height: 48px; margin: 0 0 28px; overflow: hidden; }
 .insurer-viewport { height: 100%; min-width: 0; overflow: hidden; mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, black 18%, black 82%, rgba(0,0,0,.35) 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, black 18%, black 82%, rgba(0,0,0,.35) 92%, transparent 100%); }
@@ -683,7 +683,7 @@ html[data-theme="contrast"] .policy-document > section,
 html[data-theme="contrast"] .policy-document th,
 html[data-theme="contrast"] .policy-document td { border-color: #fff; }
 html[data-theme="contrast"] .policy-cookie-button { border: 2px solid #ffe500; color: #ffe500; font-weight: 700; }
-html[data-theme="contrast"] .ai-mark { border: 2px solid #fff; background: #000; color: #fff; }
+html[data-theme="contrast"] .ai-mark { border: 0; background: rgba(255,255,255,.16); color: #fff; box-shadow: none; }
 html[data-theme="contrast"] .scroll-hint { border: 2px solid #fff; }
 html[data-theme="contrast"] .scroll-hint span { background: #ffe500; }
 html[data-theme="contrast"] .reveal { transition: none; }
